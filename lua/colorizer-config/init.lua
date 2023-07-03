@@ -1,4 +1,5 @@
-require'colorizer'.setup(
+vim.opt.termguicolors = true
+require 'colorizer'.setup(
 
 	{'*';},
 	{
@@ -10,4 +11,5 @@ require'colorizer'.setup(
 		hsl_fn	= true;
 		css			= true;
 		css_fn	= true;
+		mode    = 'background'; -- Set the display mode.
 })
