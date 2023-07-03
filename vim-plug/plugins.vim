@@ -16,14 +16,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'antoinemadec/FixCursorHold.nvim'
 
 
-  "
+  " Git integration
   Plug 'mhinz/vim-signify'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
 
   " multi cursor
-  Plug 'mg981/vim-visual-multi', {'branch': 'master'}
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
   " code completion | github.com/neoclide/coc.nvim
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
