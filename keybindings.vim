@@ -13,7 +13,12 @@
 
 
 " set <Space> as the leader key
-let mapleader=" "
+map <Space> <Leader>
+
+map Q <nop>
+
+" Replace every instance of word at cursor
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 
 " Open nvim file explorer with leader p v
 lua vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -27,6 +32,23 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 " Visually select the text that was last edited/pasted (Vimcast#26).
 noremap gV `[v`]
 
+" Better Esc in insert mode
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+" Better tabbing in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
+" Easy CAPS
+inoremap <C-u> <Esc>viwUi
+nnoremap <C-u> viwU<Esc> 
+
+" Better window navigation
+"nnoremap <C-h> <C-w>h
+"nnoremap <C-j> <C-w>j
+"nnoremap <C-k> <C-w>k
+"nnoremap <C-l> <C-w>l
 
 " toggle buffer (switch between current and last buffer)
 nnoremap <silent> <leader>bb <C-^>
@@ -57,7 +79,8 @@ nnoremap <silent> <leader>bh :new<CR>
 " vertical split with new buffer
 nnoremap <silent> <leader>bv :vnew<CR>
 
-
+" Makes the current file executable with chmod
+nnoremap <silent> <leader>x <cmd>!chmod +x %<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

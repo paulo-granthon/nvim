@@ -32,6 +32,8 @@ lua require('undotree-config')
 set nocompatible
 set notimeout
 
+set updatetime=50
+
 " Set window title by default.
 set title
 set t_Co=256

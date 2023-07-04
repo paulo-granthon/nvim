@@ -8,7 +8,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " File Explorer
   Plug 'scrooloose/NERDTree'
 
-  
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+
   Plug 'mbbill/undotree' 
 
   " LSP Support
@@ -52,7 +54,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
   Plug 'sindrets/diffview.nvim'
-
+  Plug 'airblade/vim-rooter'
 
   " multi cursor
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
