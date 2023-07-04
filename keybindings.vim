@@ -12,6 +12,8 @@
 
 
 
+" set <Space> as the leader key
+let mapleader=" "
 
 " Toggle relativenumber - number
 nmap <C-L><C-L> :set invrelativenumber<CR>
@@ -23,6 +25,34 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 noremap gV `[v`]
 
 
+" toggle buffer (switch between current and last buffer)
+nnoremap <silent> <leader>bb <C-^>
+
+" go to next buffer
+nnoremap <silent> <leader>bn :bn<CR>
+nnoremap <C-l> :bn<CR>
+
+" go to previous buffer
+nnoremap <silent> <leader>bp :bp<CR>
+" https://github.com/neovim/neovim/issues/2048
+nnoremap <C-h> :bp<CR>
+
+" close buffer
+nnoremap <silent> <leader>bd :bd<CR>
+
+" kill buffer
+nnoremap <silent> <leader>bk :bd!<CR>
+
+" list buffers
+nnoremap <silent> <leader>bl :ls<CR>
+" list and select buffer
+nnoremap <silent> <leader>bg :ls<CR>:buffer<Space>
+
+" horizontal split with new buffer
+nnoremap <silent> <leader>bh :new<CR>
+
+" vertical split with new buffer
+nnoremap <silent> <leader>bv :vnew<CR>
 
 
 

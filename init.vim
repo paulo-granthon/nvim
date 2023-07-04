@@ -19,8 +19,9 @@ source $HOME/.config/nvim/keybindings.vim
 " Loads all plugin configurations in the plug-config folder
 runtime! $HOME/.config/nvim/plug-config/*.vim  
 
-" lua plugins
+" lua config
 lua require('colorizer-config')
+lua require('treesitter-config')
 
 " Initialization
 set nocompatible
@@ -82,18 +83,31 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 set wildignore+=*.swp,*~,._*
 
-" Toggle relative line number. Default on set relativenumber
+" set number and override with relativenumber
+set number
 set relativenumber
-nmap <C-L><C-L> :set invrelativenumber<CR>
 
-" Keybindings
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
 
-" Accept CoC suggestion with Enter
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
-" Visually select the text that was last edited/pasted (Vimcast#26).
-noremap gV `[v`]
+" highlight matches when searching
+" Use C-l to clear (see key map section)
+set hlsearch
+
+" file type recognition
+filetype on
+filetype plugin on
+filetype indent on
+
+
+
+" Auto start NERD tree when opening a directory
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | wincmd p | endif
+
+" Auto start NERD tree if no files are specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | exe 'NERDTree' | endif
+
+" Let quit work as expected if after entering :q the only window left open is NERD Tree itself
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 

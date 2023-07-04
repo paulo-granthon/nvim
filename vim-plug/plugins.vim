@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " File and Directory finder
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+  Plug 'ThePrimeagen/harpoon'
 
   " Easy comments				TODO: Needs custom keybindings
   Plug 'numToStr/Comment.nvim'
