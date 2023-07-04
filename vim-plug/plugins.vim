@@ -8,6 +8,21 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " File Explorer
   Plug 'scrooloose/NERDTree'
 
+  
+  Plug 'mbbill/undotree' 
+
+  " LSP Support
+  Plug 'neovim/nvim-lspconfig'                           " Required
+  Plug 'williamboman/mason.nvim', {'do': ':MasonUpdate'} " Optional
+  Plug 'williamboman/mason-lspconfig.nvim'               " Optional
+
+  " Autocompletion
+  Plug 'hrsh7th/nvim-cmp'     " Required
+  Plug 'hrsh7th/cmp-nvim-lsp' " Required
+  Plug 'L3MON4D3/LuaSnip'     " Required
+
+  Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
+
   " Terminal 
   Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
@@ -41,9 +56,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " multi cursor
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-
-  " code completion | github.com/neoclide/coc.nvim
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " colorized background for color codes | github.com/norcalli/nvim-colorizer.lua
   Plug 'norcalli/nvim-colorizer.lua'

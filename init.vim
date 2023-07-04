@@ -1,11 +1,14 @@
-"     _______         /|
-"    /__  __/    _ __/ |   ___         
-"      / /____  (_) /_ |  / (_)___ ___ 
-"     / // __ \/ / __/ | / / / __ `__ \
-"    / // / / / / /__| |/ / / / / / / /
-" __/ //_/_/_/_/\__(_)   /_/_/ /_/ / / 
-"/______/            \__/          \|
 
+""""""""""""""""""""""""""""""""""""""""""
+""""""_______"""""""""/|""""""""""""""""""
+"    /__  __/    _ __/ |   ___           "
+"      / /____  (_) /_ |  / (_)___ ___   "
+"     / // __ \/ / __/ | / / / __ `__ \  "
+"    / // / / / / /__| |/ / / / / / / /  "
+" __/ //_/_/_/_/\__(_)   /_/_/ /_/ / /   "
+"/______/            \__/          \|    "
+""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""
 
 " Loads all plugins in the vim-plug folder
 source $HOME/.config/nvim/vim-plug/plugins.vim
@@ -22,6 +25,8 @@ runtime! $HOME/.config/nvim/plug-config/*.vim
 " lua config
 lua require('colorizer-config')
 lua require('treesitter-config')
+lua require('harpoon-config')
+lua require('undotree-config')
 
 " Initialization
 set nocompatible

@@ -15,6 +15,9 @@
 " set <Space> as the leader key
 let mapleader=" "
 
+" Open nvim file explorer with leader p v
+lua vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
 " Toggle relativenumber - number
 nmap <C-L><C-L> :set invrelativenumber<CR>
 
