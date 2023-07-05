@@ -1,4 +1,3 @@
-
 """"""""""""""""""""""""""""""""""""""""""
 """"""_______"""""""""/|""""""""""""""""""
 "    /__  __/    _ __/ |   ___           "
@@ -27,9 +26,9 @@ lua require('colorizer-config')
 lua require('treesitter-config')
 lua require('harpoon-config')
 lua require('undotree-config')
+lua require('mini-map-config')
 
 " Initialization
-set encoding=UTF-8
 set nocompatible
 set notimeout
 

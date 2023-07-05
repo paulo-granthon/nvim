@@ -8,6 +8,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " File Explorer
   Plug 'scrooloose/NERDTree'
 
+  " Status bar - Airline
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
@@ -47,6 +48,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'kosayoda/nvim-lightbulb'
   Plug 'antoinemadec/FixCursorHold.nvim'
 
+  " VSCode style minimap overlay
+  Plug 'echasnovski/mini.map'
 
   " Git integration
   Plug 'mhinz/vim-signify'

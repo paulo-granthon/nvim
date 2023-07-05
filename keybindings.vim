@@ -51,7 +51,7 @@ nnoremap <C-u> viwU<Esc>
 "nnoremap <C-l> <C-w>l
 
 " toggle buffer (switch between current and last buffer)
-nnoremap <silent> <leader>bb <C-^>
+" nnoremap <silent> <leader>bb <C-^>
 
 " go to next buffer
 nnoremap <silent> <leader>bn :bn<CR>
@@ -70,6 +70,7 @@ nnoremap <silent> <leader>bk :bd!<CR>
 
 " list buffers
 nnoremap <silent> <leader>bl :ls<CR>
+
 " list and select buffer
 nnoremap <silent> <leader>bg :ls<CR>:buffer<Space>
 
