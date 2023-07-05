@@ -1,6 +1,10 @@
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
 " enable tabline
 let g:airline#extensions##tabline#enabled = 1
-let g:airline#extensions##tabline#left_sep = '>'
+" let g:airline#extensions##tabline#left_sep = '>'
 "let g:airline#extensions##tabline#letf_all_sep = ''
 "let g:airline#extensions##tabline#right_sep = ''
 "let g:airline#extensions##tabline#right_all_sep = ''

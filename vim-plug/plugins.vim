@@ -64,7 +64,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " dev icons | github.com/nvim-tree/nvim-web-devicons
   Plug 'nvim-tree/nvim-web-devicons'
+  Plug 'ryanoasis/vim-devicons'
 
+set encoding=UTF-8
 call plug#end()
 
 

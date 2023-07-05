@@ -29,6 +29,7 @@ lua require('harpoon-config')
 lua require('undotree-config')
 
 " Initialization
+set encoding=UTF-8
 set nocompatible
 set notimeout
 
