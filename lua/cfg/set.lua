@@ -35,4 +35,5 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.wo.fillchars='eob:·'
+-- replace end of buffer character
+vim.opt.fillchars:append('eob:·')
