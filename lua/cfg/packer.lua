@@ -26,4 +26,37 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
 
+  use {
+	  'VonHeikemen/lsp-zero.nvim',
+	  branch = 'v2.x',
+	  requires = {
+		  -- LSP Support
+		  {'neovim/nvim-lspconfig'},             -- Required
+		  {                                      -- Optional
+			  'williamboman/mason.nvim',
+			  run = function()
+				  pcall(vim.cmd, 'MasonUpdate')
+			  end,
+		  },
+		  {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+		  -- Autocompletion
+		  {'hrsh7th/nvim-cmp'},     -- Required
+		  {'hrsh7th/cmp-buffer'},
+		  {'hrsh7th/cmp-path'},
+		  {'hrsh7th/cmp-nvim-lsp'}, -- Required
+		  {'hrsh7th/cmp-nvim-lua'},
+		  {'L3MON4D3/LuaSnip'},     -- Required
+	  }
+  }
+
+
+  use('nvim-tree/nvim-web-devicons')
+  use('ryanoasis/vim-devicons')
+
+  --- Status bar - Airline
+  use('vim-airline/vim-airline')
+  use('vim-airline/vim-airline-themes')
+
+
 end)
