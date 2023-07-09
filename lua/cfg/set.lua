@@ -37,3 +37,8 @@ vim.opt.updatetime = 50
 
 -- replace end of buffer character
 vim.opt.fillchars:append('eob:·')
+
+-- always display tabs
+vim.o.showtabline = 2
+
+vim.o.title = true

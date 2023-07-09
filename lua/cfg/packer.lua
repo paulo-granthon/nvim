@@ -66,5 +66,19 @@ return require('packer').startup(function(use)
     -- better indentation indication
     use "lukas-reineke/indent-blankline.nvim"
 
+    -- greeter
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.startify'.config)
+        end
+    }
+
+    -- fun
+    use("eandrju/cellular-automaton.nvim")
+
+    -- hide sensitive data
+    use("laytan/cloak.nvim")
 
 end)
