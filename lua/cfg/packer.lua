@@ -25,14 +25,50 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    use({
+        "dnlhc/glance.nvim",
+        config = function()
+            require('glance').setup({
+                -- your configuration
+            })
+        end,
+    })
+
     -- better undo handling
     use('mbbill/undotree')
 
+    -- Auto pairs for '(', '[', '{'
+    use("jiangmiao/auto-pairs")
+
+    -- Quick surrounding with '(', '"', '{', etc
+    use({
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here, or leave empty to use defaults
+            })
+        end
+    })
+
+    -- To expand or collapse blocks of code
+    use({
+        'Wansmer/treesj',
+        requires = { 'nvim-treesitter' },
+        config = function()
+            require('treesj').setup({--[[ your config ]]})
+        end,
+    })
+
+    -- 
+    use("theprimeagen/refactoring.nvim")
+
     -- Git integration
     use('tpope/vim-fugitive')
+    use('lewis6991/gitsigns.nvim')
 
     -- LSP
-    use {
+    use{
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
         requires = {
@@ -55,6 +91,23 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- Highlights repetitions of the word at the cursor
+    use ({
+        'RRethy/vim-illuminate',
+        config = function ()
+            require('illuminate').configure({
+                delay = 200,
+                under_cursor = false,
+
+            })
+        end
+    })
+
+    -- for Errors and Warnings
+    use({
+        "folke/trouble.nvim",
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    })
     -- icons
     use('nvim-tree/nvim-web-devicons')
     use('ryanoasis/vim-devicons')
@@ -67,7 +120,7 @@ return require('packer').startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
 
     -- greeter
-    use {
+    use{
         'goolord/alpha-nvim',
         requires = { 'nvim-tree/nvim-web-devicons' },
         config = function ()
@@ -81,4 +134,8 @@ return require('packer').startup(function(use)
     -- hide sensitive data
     use("laytan/cloak.nvim")
 
+
+
+    -- JAVA
+    use 'mfussenegger/nvim-dap'
 end)
