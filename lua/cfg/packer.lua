@@ -16,15 +16,20 @@ return require('packer').startup(function(use)
         end
     })
 
-    -- file navigation
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    -- sticky buffer list
     use('ThePrimeagen/harpoon')
+
+    -- file navigation
     use{
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    -- linting and more
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
+    -- peeking
     use({
         "dnlhc/glance.nvim",
         config = function()
