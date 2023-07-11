@@ -1,4 +1,4 @@
-    vim.g["airline_theme"] = 'jellybeans' 
+vim.g["airline_theme"] = 'jellybeans' 
 
 vim.o.showtabline = 2
 vim.o.showmode = false

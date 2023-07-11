@@ -138,4 +138,10 @@ return require('packer').startup(function(use)
 
     -- JAVA
     use 'mfussenegger/nvim-dap'
+
+    -- Markdown file preview
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 end)
