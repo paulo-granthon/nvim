@@ -39,6 +39,6 @@ vim.opt.updatetime = 50
 vim.opt.fillchars:append('eob:·')
 
 -- always display tabs
-vim.o.showtabline = 2
+-- vim.o.showtabline = 2
 
 vim.o.title = true

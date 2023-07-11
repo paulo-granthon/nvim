@@ -1,26 +1,25 @@
-vim.g["airline_theme"] = 'jellybeans' 
+-- enable theme
+vim.g["airline_theme"] = 'jellybeans'
+-- vim.g["airline"]
 
+-- use powerline fonts
+vim.g["airline_powerline_fonts"] = 1
+
+-- NeoVim options
 vim.o.showtabline = 2
 vim.o.showmode = false
 
-vim.g["airline#extensions#tabline#enabled"] = 1
+-- enable tabline
+vim.g['airline#extensions#tabline#enabled'] = 1
 
--- vim.g["airline#extensions#tabline#left_sep"] = '>'
--- vim.g["airline#extensions#tabline#letf_all_sep"] = ''
--- vim.g["airline#extensions#tabline#right_sep"] = '<'
--- vim.g["airline#extensions#tabline#right_all_sep"] = ''
+-- tabline symbols
+vim.g["airline#extensions#tabline#left_sep"] = ''
+vim.g["airline#extensions#tabline#letf_alt_sep"] = ''
+vim.g["airline#extensions#tabline#right_sep"] = ''
+vim.g["airline#extensions#tabline#right_alt_sep"] = ''
 
-vim.g["airline_powerline_fonts"] = 1
-
-
-vim.o.guifont = 'DejaVu:Sans:s12'
--- 
--- -- Airline
--- vim.g["airline_powerline_fonts"] = 1
--- 
--- if !exists('g:airline_symbols')
---     vim.g["airline_symbols"] = {}
--- endif
+-- set the specific font for airline
+-- vim.o.guifont = 'DejaVu:Sans:s12'
 
 -- unicode symbols
 vim.g["airline_left_sep"] = '»'
@@ -41,6 +40,6 @@ vim.g["airline_left_sep"] = ''
 vim.g["airline_left_alt_sep"] = ''
 vim.g["airline_right_sep"] = ''
 vim.g["airline_right_alt_sep"] = ''
--- vim.g["airline_symbols.branch"] = ''
--- vim.g["airline_symbols.readonly"] = ''
--- vim.g["airline_symbols.linenr"] = ''
+vim.g["airline_symbols.branch"] = ''
+vim.g["airline_symbols.readonly"] = ''
+vim.g["airline_symbols.linenr"] = ''

@@ -4,8 +4,8 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
+
+    use 'wbthomason/packer.nvim' -- Packer can manage itself
 
     -- colorscheme
     use({
@@ -28,7 +28,12 @@ return require('packer').startup(function(use)
 
     -- everybody knows treesitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use('nvim-treesitter/nvim-treesitter-context')
+    use({
+        'nvim-treesitter/nvim-treesitter-context',
+        config = function()
+            vim.g['airline#extensions#tabline#enabled'] = 1
+        end
+    })
 
     -- peeking
     use({
@@ -79,21 +84,17 @@ return require('packer').startup(function(use)
         branch = 'v2.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim',            -- Optional
-                run = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
-            },
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            {'neovim/nvim-lspconfig'},                          -- Required
+            {'williamboman/mason.nvim', run = ':MasonUpdate' }, -- Optional
+            {'williamboman/mason-lspconfig.nvim'},              -- Optional
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/nvim-cmp'},                               -- Required
             {'hrsh7th/cmp-buffer'},
             {'hrsh7th/cmp-path'},
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'hrsh7th/cmp-nvim-lsp'},                           -- Required
             {'hrsh7th/cmp-nvim-lua'},
-            {'L3MON4D3/LuaSnip'},     -- Required
+            {'L3MON4D3/LuaSnip'},                               -- Required
         }
     }
 
