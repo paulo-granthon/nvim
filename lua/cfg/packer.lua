@@ -12,19 +12,20 @@ return require('packer').startup(function(use)
         'navarasu/onedark.nvim',
         as = 'onedark',
         config = function()
-            vim.cmd.colorscheme('onedark')
         end
     })
 
     -- sticky buffer list
     use('ThePrimeagen/harpoon')
 
-    -- file navigation
+    -- faster file navigation
     use{
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    -- file explorer sidebar
+    use 'nvim-neo-tree/neo-tree.nvim'
 
     -- everybody knows treesitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
