@@ -73,12 +73,20 @@ return require('packer').startup(function(use)
         end,
     })
 
-    -- 
+    --
     use("theprimeagen/refactoring.nvim")
 
     -- Git integration
     use('tpope/vim-fugitive')
     use('lewis6991/gitsigns.nvim')
+    use({
+        'luukvbaal/statuscol.nvim',
+        config = function()
+            require("statuscol").setup({
+                --
+            })
+        end
+    })
 
     -- LSP
     use{
