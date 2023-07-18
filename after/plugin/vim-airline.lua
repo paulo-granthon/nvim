@@ -12,11 +12,22 @@ vim.o.showmode = false
 -- enable tabline
 vim.g['airline#extensions#tabline#enabled'] = 1
 
+-- tabline formatter, changes how the text on the tabs are displayed
+vim.g['airline#extensions#tabline#formatter'] = 'unique_tail_improved'
+
+
+if not vim.g["airline_symbols"] then
+  vim.g["airline_symbols"] = {}
+end
+vim.g["airline_symbols#space"] = ""
+
 -- tabline symbols
 vim.g["airline#extensions#tabline#left_sep"] = ''
-vim.g["airline#extensions#tabline#letf_alt_sep"] = ''
+--vim.g["airline#extensions#tabline#letf_alt_sep"] = ''
+vim.g["airline#extensions#tabline#letf_alt_sep"] = '|'
 vim.g["airline#extensions#tabline#right_sep"] = ''
-vim.g["airline#extensions#tabline#right_alt_sep"] = ''
+--vim.g["airline#extensions#tabline#right_alt_sep"] = ''
+vim.g["airline#extensions#tabline#right_alt_sep"] = '|'
 
 -- set the specific font for airline
 -- vim.o.guifont = 'DejaVu:Sans:s12'
