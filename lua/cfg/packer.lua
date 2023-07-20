@@ -75,7 +75,8 @@ return require('packer').startup(function(use)
     })
 
     --
-    use("theprimeagen/refactoring.nvim")
+    use 'theprimeagen/refactoring.nvim'
+    use 'numToStr/Comment.nvim'
 
     -- Git integration
     use('tpope/vim-fugitive')
