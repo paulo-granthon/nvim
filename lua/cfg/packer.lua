@@ -90,6 +90,8 @@ return require('packer').startup(function(use)
         end
     })
 
+    use 'voldikss/vim-floaterm'
+
     -- LSP
     use{
         'VonHeikemen/lsp-zero.nvim',
