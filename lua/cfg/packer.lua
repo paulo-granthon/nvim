@@ -15,6 +15,9 @@ return require('packer').startup(function(use)
         end
     })
 
+    -- colorize color codes for frontend dev :)
+    use 'norcalli/nvim-colorizer.lua'
+
     -- sticky buffer list
     use('ThePrimeagen/harpoon')
 
