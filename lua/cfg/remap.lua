@@ -58,6 +58,9 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- Replace every instance of word at cursor
 vim.keymap.set("n", "<leader>rn", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
+-- Sometimes is useful to have line wrap on
+vim.keymap.set("n", "<leader>tlw", function() vim.wo.wrap = not vim.wo.wrap end)
+
 -- For making Bash scrpts executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
