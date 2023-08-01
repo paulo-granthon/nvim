@@ -9,7 +9,8 @@ vim.keymap.set("n", "<leader>gp", ":G push");                   -- no <CR> at th
 vim.keymap.set("n", "<leader>gd", ":G diff<CR>");
 
 -- Git Branch commands
-vim.keymap.set('n', '<leader>gbc', ":G checkout ")              -- Checkout
+vim.keymap.set('n', '<leader>gco', ":G checkout ")              -- Checkout
+vim.keymap.set('n', '<leader>gcn', ":G checkout -b")              -- Checkout new
 
 -- function to create and push new branch
 function GitCheckoutAndSetUpstream(arg)
@@ -28,4 +29,4 @@ vim.cmd([[
 ]])
 
 -- Checkout to new branch and push to remote
-vim.keymap.set('n', '<leader>gbp', ':GitCheckoutAndSetUpstream ', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>gnp', ':GitCheckoutAndSetUpstream ', { noremap = true, silent = true })
