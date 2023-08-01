@@ -12,7 +12,8 @@ vim.keymap.set("n", "<leader>gd", ":G diff<CR>");
 
 -- Git Branch commands
 vim.keymap.set('n', '<leader>gco', ":G checkout ")              -- Checkout
-vim.keymap.set('n', '<leader>gcn', ":G checkout -b")              -- Checkout new
+vim.keymap.set('n', '<leader>gcn', ":G checkout -b")            -- Checkout new
+vim.keymap.set('n', '<leader>gm', ":G merge ")                  -- merge - requires argument
 
 
 -- function to create and push new branch
