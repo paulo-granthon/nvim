@@ -1,6 +1,6 @@
 
 -- Git status
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git);                 -- fugitive interface with status and interative staging
+vim.keymap.set("n", "<leader>gs", ':G<CR>5j');                 -- fugitive interface with status and interative staging. 5j to move to first listed file
 
 -- basic workflow
 vim.keymap.set('n', '<leader>gf', ":G fetch<CR>")               -- fetch
