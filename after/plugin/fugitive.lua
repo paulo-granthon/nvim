@@ -34,3 +34,6 @@ vim.cmd([[
 
 -- Checkout to new branch and push to remote
 vim.keymap.set('n', '<leader>gnp', ':GitCheckoutAndSetUpstream ', { noremap = true, silent = true })
+
+-- craziness
+vim.keymap.set('n', '<leader>gsmu', ':G submodule update --init --recursive', { noremap = true, silent = true })
