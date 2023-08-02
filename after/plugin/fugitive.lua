@@ -10,8 +10,10 @@ vim.keymap.set("n", "<leader>gc", ":G commit -m \"\"<left>")    -- opens git com
 vim.keymap.set("n", "<leader>gk", ":G push")                    -- no <CR> at the end to prevent accidents
 vim.keymap.set("n", "<leader>gd", ":G diff<CR>")
 
--- "maximize performance"
+-- I'm gonna regret this later
 vim.keymap.set('n', '<leader>grf', ':G restore ')
+vim.keymap.set('n', '<leader>gra', ':G restore .')
+vim.keymap.set('n', '<leader>grc', ':G restore --cached ')
 
 -- Git Branch commands
 vim.keymap.set('n', '<leader>gco', ":G checkout ")              -- Checkout
