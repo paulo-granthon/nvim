@@ -14,6 +14,9 @@ vim.g.mapleader = " "
 -- Absolutelly needed
 vim.keymap.set("n", "Q", "<nop>")
 
+-- Faster save and quit
+vim.keymap.set('n', '<leader>q', ":q<CR>")
+
 -- Easy netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
