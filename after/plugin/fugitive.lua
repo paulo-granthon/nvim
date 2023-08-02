@@ -5,10 +5,13 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git);                 -- fugitive inte
 -- basic workflow
 vim.keymap.set('n', '<leader>gf', ":G fetch<CR>")               -- fetch
 vim.keymap.set('n', '<leader>gj', ":G pull<CR>")                -- pull
-vim.keymap.set("n", "<leader>ga", ":G add ");                   -- opens git add command ready for parameters 
-vim.keymap.set("n", "<leader>gc", ":G commit -m \"\"<left>");   -- opens git commit with the cursor between quotes
-vim.keymap.set("n", "<leader>gk", ":G push");                   -- no <CR> at the end to prevent accidents
-vim.keymap.set("n", "<leader>gd", ":G diff<CR>");
+vim.keymap.set("n", "<leader>ga", ":G add ")                    -- opens git add command ready for parameters 
+vim.keymap.set("n", "<leader>gc", ":G commit -m \"\"<left>")    -- opens git commit with the cursor between quotes
+vim.keymap.set("n", "<leader>gk", ":G push")                    -- no <CR> at the end to prevent accidents
+vim.keymap.set("n", "<leader>gd", ":G diff<CR>")
+
+-- "maximize performance"
+vim.keymap.set('n', '<leader>grf', ':G restore ')
 
 -- Git Branch commands
 vim.keymap.set('n', '<leader>gco', ":G checkout ")              -- Checkout
