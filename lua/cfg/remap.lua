@@ -16,6 +16,7 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- Faster save and quit
 vim.keymap.set('n', '<leader>q', ":q<CR>")
+vim.keymap.set('n', '<leader>w', ":w<CR>")
 
 -- Easy netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
