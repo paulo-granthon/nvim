@@ -53,11 +53,11 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- window navigation
-vim.keymap.set('n', ';w', '<C-w>w');
-vim.keymap.set('n', ';h', '<C-w>h');
-vim.keymap.set('n', ';j', '<C-w>j');
-vim.keymap.set('n', ';k', '<C-w>k');
-vim.keymap.set('n', ';l', '<C-w>l');
+vim.keymap.set({'n', 'v'}, ';w', '<C-w>w');
+vim.keymap.set({'n', 'v'}, ';h', '<C-w>h');
+vim.keymap.set({'n', 'v'}, ';j', '<C-w>j');
+vim.keymap.set({'n', 'v'}, ';k', '<C-w>k');
+vim.keymap.set({'n', 'v'}, ';l', '<C-w>l');
 
 -- greatest remap ever | Pastes witouth losing the current paste buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
