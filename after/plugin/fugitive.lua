@@ -16,8 +16,8 @@ vim.keymap.set('n', '<leader>gra', ':G restore .')
 vim.keymap.set('n', '<leader>grc', ':G restore --cached ')
 
 -- Git Branch commands
-vim.keymap.set('n', '<leader>gco', ":G checkout ")              -- Checkout
-vim.keymap.set('n', '<leader>gcn', ":G checkout -b")            -- Checkout new
+vim.keymap.set('n', '<leader>gbc', ":G checkout ")              -- Checkout
+vim.keymap.set('n', '<leader>gbn', ":G checkout -b")            -- Checkout new
 vim.keymap.set('n', '<leader>gm', ":G merge ")                  -- merge - requires argument
 
 
@@ -38,7 +38,7 @@ vim.cmd([[
 ]])
 
 -- Checkout to new branch and push to remote
-vim.keymap.set('n', '<leader>gnp', ':GitCheckoutAndSetUpstream ', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>gbp', ':GitCheckoutAndSetUpstream ', { noremap = true, silent = true })
 
 -- craziness
 vim.keymap.set('n', '<leader>gsmu', ':G submodule update --init --recursive', { noremap = true, silent = true })
