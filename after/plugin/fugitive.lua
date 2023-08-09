@@ -41,4 +41,4 @@ vim.cmd([[
 vim.keymap.set('n', '<leader>gbp', ':GitCheckoutAndSetUpstream ', { noremap = true, silent = true })
 
 -- craziness
-vim.keymap.set('n', '<leader>gsmu', ':G submodule update --init --recursive', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>gusm', ':G submodule update --init --recursive', { noremap = true, silent = true })
