@@ -56,14 +56,22 @@ vim.keymap.set({"n", "v", "i"}, "<C-End>", "<C-End>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- "third leader " \
 -- window navigation
-vim.keymap.set({'n', 'v'}, ';w', '<C-w>w');
-vim.keymap.set({'n', 'v'}, ';h', '<C-w>h');
-vim.keymap.set({'n', 'v'}, ';j', '<C-w>j');
-vim.keymap.set({'n', 'v'}, ';k', '<C-w>k');
-vim.keymap.set({'n', 'v'}, ';l', '<C-w>l');
+vim.keymap.set({'n', 'v'}, '\\w', '<C-w>w');
+vim.keymap.set({'n', 'v'}, '\\h', '<C-w>h');
+vim.keymap.set({'n', 'v'}, '\\j', '<C-w>j');
+vim.keymap.set({'n', 'v'}, '\\k', '<C-w>k');
+vim.keymap.set({'n', 'v'}, '\\l', '<C-w>l');
 
--- greatest remap ever | Pastes witouth losing the current paste buffer
+-- window navigation reverse
+vim.keymap.set({'n', 'v'}, '\\W', '<C-w>W');
+vim.keymap.set({'n', 'v'}, '\\H', '<C-w>H');
+vim.keymap.set({'n', 'v'}, '\\J', '<C-w>J');
+vim.keymap.set({'n', 'v'}, '\\K', '<C-w>K');
+vim.keymap.set({'n', 'v'}, '\\L', '<C-w>L');
+
+-- greatest remap ever | Pastes without losing the current paste buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland | Allows copy to system clipboard
