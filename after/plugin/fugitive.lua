@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>ga", ":G add ")                    -- opens git add
 vim.keymap.set("n", "<leader>gc", ":G commit -m \"\"<left>")    -- opens git commit with the cursor between quotes
 vim.keymap.set("n", "<leader>gk", ":G push")                    -- no <CR> at the end to prevent accidents
 vim.keymap.set("n", "<leader>gd", ":G diff<CR>")
+vim.keymap.set("n", "<leader>gl", ":G log<CR>")
 
 -- I'm gonna regret this later
 vim.keymap.set('n', '<leader>grf', ':G restore ')
