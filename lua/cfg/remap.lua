@@ -40,7 +40,7 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Append line bellow to the end of the line and keep cursor at current position 
+-- Append line bellow to the end of the line and keep cursor at current position
 vim.keymap.set("n", "J", "mzJ`z")
 
 -- Move half-page keeping the cursor in the middle
