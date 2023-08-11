@@ -18,6 +18,10 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set('n', '<leader>q', ":q<CR>")
 vim.keymap.set('n', '<leader>w', ":w<CR>")
 
+-- "secondary leader" ;
+-- Faster save and back to Explorer
+vim.keymap.set('n', ';wq', ":w<CR>:Ex<CR>")
+
 -- Easy netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
