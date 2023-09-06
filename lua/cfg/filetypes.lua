@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = {
+    pattern = {
         "html",
         "css",
         "js",
@@ -8,8 +8,8 @@ vim.api.nvim_create_autocmd("FileType", {
         "jsx",
         "json",
     },
-	callback = function()
-		vim.opt_local.shiftwidth = 2
-		vim.opt_local.tabstop = 2
-	end
+    callback = function()
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.tabstop = 2
+    end
 })
