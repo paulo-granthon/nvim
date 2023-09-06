@@ -18,6 +18,9 @@ vim.keymap.set("n", "<leader>gtd", ":G stash drop") -- drop
 vim.keymap.set("n", "<leader>gta", ":G stash apply") -- apply
 vim.keymap.set("n", "<leader>gts", ":G stash show<CR>") -- log
 
+-- reset
+vim.keymap.set("n", "<leader>gR", ":G reset HEAD~")
+
 -- I'm gonna regret this later
 vim.keymap.set('n', '<leader>grf', ':G restore ')
 vim.keymap.set('n', '<leader>gra', ':G restore .')
