@@ -17,10 +17,10 @@ vim.opt.wrap = false
 -- disable backup & set undodir
 vim.opt.swapfile = false
 vim.opt.backup = false
-if not package.config:sub(1,1) == '\\' then
-    vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- Linux
-else
+if package.config:sub(1,1) == '\\' then
     vim.opt.undodir = os.getenv("LOCALAPPDATA") .. "\\.vim\\undodir" -- Windows
+else
+    vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- Linux
 end
 vim.opt.undofile = true
 
