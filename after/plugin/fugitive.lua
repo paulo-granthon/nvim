@@ -5,11 +5,18 @@ vim.keymap.set("n", "<leader>gs", ':G<CR>5j');                 -- fugitive inter
 -- basic workflow
 vim.keymap.set('n', '<leader>gf', ":G fetch<CR>")               -- fetch
 vim.keymap.set('n', '<leader>gj', ":G pull<CR>")                -- pull
-vim.keymap.set("n", "<leader>ga", ":G add ")                    -- opens git add command ready for parameters 
+vim.keymap.set("n", "<leader>ga", ":G add ")                    -- opens git add command ready for parameters
 vim.keymap.set("n", "<leader>gc", ":G commit -m \"\"<left>")    -- opens git commit with the cursor between quotes
 vim.keymap.set("n", "<leader>gk", ":G push")                    -- no <CR> at the end to prevent accidents
 vim.keymap.set("n", "<leader>gd", ":G diff<CR>")
 vim.keymap.set("n", "<leader>gl", ":G log<CR>")
+
+-- stashing
+vim.keymap.set("n", "<leader>gtk", ":G stash<CR>") -- add
+vim.keymap.set("n", "<leader>gtj", ":G stash pop") -- pop
+vim.keymap.set("n", "<leader>gtd", ":G stash drop") -- drop
+vim.keymap.set("n", "<leader>gta", ":G stash apply") -- apply
+vim.keymap.set("n", "<leader>gts", ":G stash show<CR>") -- log
 
 -- I'm gonna regret this later
 vim.keymap.set('n', '<leader>grf', ':G restore ')
