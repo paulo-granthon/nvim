@@ -1,6 +1,8 @@
+-- base (in case I just want a quicker `:G ` written in my command line or fail to complete a combo after enough time)
+vim.keymap.set("n", "<leader>g", ":G ")
 
 -- Git status
-vim.keymap.set("n", "<leader>gs", ':G<CR>5j');                 -- fugitive interface with status and interative staging. 5j to move to first listed file
+vim.keymap.set("n", "<leader>gs", ':G<CR>5j')                 -- fugitive interface with status and interative staging. 5j to move to first listed file
 
 -- basic workflow
 vim.keymap.set('n', '<leader>gf', ":G fetch<CR>")               -- fetch
