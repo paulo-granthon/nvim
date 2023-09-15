@@ -15,6 +15,7 @@ vim.keymap.set("n", "<leader>gk", ":G push ")                    -- no <CR> at t
 vim.keymap.set('n', '<leader>gF', ':G fetch --all<CR>')
 vim.keymap.set("n", "<leader>gR", ":G reset HEAD~")
 vim.keymap.set('n', '<leader>gK', ':G push -f ')
+vim.keymap.set('n', '<leader>gJ', ':G pull -f ')
 vim.keymap.set('n', '<leader>gI', ':G rebase -i ')
 
 -- info
