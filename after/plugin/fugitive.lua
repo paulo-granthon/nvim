@@ -4,12 +4,20 @@ vim.keymap.set("n", "<leader>g", ":G ")
 -- Git status
 vim.keymap.set("n", "<leader>gs", ':G<CR>5j')                 -- fugitive interface with status and interative staging. 5j to move to first listed file
 
--- basic workflow
+-- basic commands
 vim.keymap.set('n', '<leader>gf', ":G fetch<CR>")               -- fetch
 vim.keymap.set('n', '<leader>gj', ":G pull<CR>")                -- pull
 vim.keymap.set("n", "<leader>ga", ":G add ")                    -- opens git add command ready for parameters
 vim.keymap.set("n", "<leader>gc", ":G commit -m \"\"<left>")    -- opens git commit with the cursor between quotes
 vim.keymap.set("n", "<leader>gk", ":G push ")                    -- no <CR> at the end to prevent accidents
+
+-- "advanced" commands
+vim.keymap.set('n', '<leader>gF', ':G fetch --all<CR>')
+vim.keymap.set("n", "<leader>gR", ":G reset HEAD~")
+vim.keymap.set('n', '<leader>gK', ':G push -f ')
+vim.keymap.set('n', '<leader>gI', ':G rebase -i ')
+
+-- info
 vim.keymap.set("n", "<leader>gd", ":G diff<CR>")
 vim.keymap.set("n", "<leader>gl", ":G log<CR>")
 
@@ -20,9 +28,6 @@ vim.keymap.set("n", "<leader>gtd", ":G stash drop") -- drop
 vim.keymap.set("n", "<leader>gta", ":G stash apply") -- apply
 vim.keymap.set("n", "<leader>gts", ":G stash show<CR>") -- log
 
--- reset
-vim.keymap.set("n", "<leader>gR", ":G reset HEAD~")
-
 -- I'm gonna regret this later
 vim.keymap.set('n', '<leader>grf', ':G restore ')
 vim.keymap.set('n', '<leader>gra', ':G restore .')
@@ -30,7 +35,7 @@ vim.keymap.set('n', '<leader>grc', ':G restore --cached ')
 
 -- Git Branch commands
 vim.keymap.set('n', '<leader>gbc', ":G checkout ")              -- Checkout
-vim.keymap.set('n', '<leader>gbn', ":G checkout -b")            -- Checkout new
+vim.keymap.set('n', '<leader>gbn', ":G checkout -b ")            -- Checkout new
 vim.keymap.set('n', '<leader>gm', ":G merge ")                  -- merge - requires argument
 
 
