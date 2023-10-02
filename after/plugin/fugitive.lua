@@ -22,6 +22,7 @@ vim.keymap.set('n', '<leader>gI', ':G rebase -i ')
 -- info
 vim.keymap.set("n", "<leader>gd", ":G diff<CR>")
 vim.keymap.set("n", "<leader>gl", ":G log<CR>")
+vim.keymap.set("n", "<leader>gbm", ":G blame<CR>")
 
 -- stashing
 vim.keymap.set("n", "<leader>gtk", ":G stash<CR>") -- add
