@@ -38,8 +38,11 @@ vim.keymap.set('n', '<leader>grc', ':G restore --cached ')
 
 -- Git Branch commands
 vim.keymap.set('n', '<leader>gbc', ":G checkout ")              -- Checkout
-vim.keymap.set('n', '<leader>gbn', ":G checkout -b ")            -- Checkout new
+vim.keymap.set('n', '<leader>gbn', ":G checkout -b ")           -- Checkout new
 vim.keymap.set('n', '<leader>gm', ":G merge ")                  -- merge - requires argument
+vim.keymap.set('n', '<leader>gbd', ":G branch -d ")             -- delete branch
+vim.keymap.set('n', '<leader>gbD', ":G branch -D ")             -- delete branch even it not fully merged
+vim.keymap.set('n', '<leader>gbkd', ":G push origin --delete ") -- delete branch from remote
 
 
 -- function to create and push new branch
