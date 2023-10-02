@@ -85,6 +85,12 @@ vim.keymap.set({'n', 'v'}, '\\-', '<C-w>-')
 vim.keymap.set({'n', 'v'}, '\\.', '<C-w>>')
 vim.keymap.set({'n', 'v'}, '\\,', '<C-w><')
 
+-- resize windows faster
+vim.keymap.set({'n', 'v'}, '<bar>+', '<C-w>16+')
+vim.keymap.set({'n', 'v'}, '<bar>_', '<C-w>16-')
+vim.keymap.set({'n', 'v'}, '<bar>>', '<C-w>16>')
+vim.keymap.set({'n', 'v'}, '<bar><', '<C-w>16<')
+
 -- greatest remap ever | Pastes without losing the current paste buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
