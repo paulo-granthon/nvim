@@ -8,6 +8,9 @@
 ------------------------|/-----------------
 -------------------------------------------
 
+-- faster rm -rf for deleting folders (specially while on netrw)
+vim.keymap.set("n", "<leader>rm", ":!rm -rf ")
+
 -- <Space> leader
 vim.g.mapleader = " "
 
