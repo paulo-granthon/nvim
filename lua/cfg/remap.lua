@@ -8,9 +8,6 @@
 ------------------------|/-----------------
 -------------------------------------------
 
--- faster rm -rf for deleting folders (specially while on netrw)
-vim.keymap.set("n", "<leader>rm", ":!rm -rf ")
-
 -- <Space> leader
 vim.g.mapleader = " "
 
@@ -118,4 +115,7 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 -- source new updated keybindings on this file from anywhere
 vim.keymap.set('n', '<leader>so', ':source $HOME/.config/nvim/lua/cfg/remap.lua<CR>');
+
+-- faster rm -rf for deleting folders (specially while on netrw)
+vim.keymap.set("n", "<leader>rm", ":!rm -rf ")
 
