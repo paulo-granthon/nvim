@@ -34,6 +34,10 @@ vim.keymap.set("n", "<C-L><C-L>", ":set invrelativenumber<CR>")
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("i", "kj", "<Esc>")
 
+-- Better exiting terminal insert mode
+vim.keymap.set("t", "jk", "<C-\\><C-n>")
+vim.keymap.set("t", "kj", "<C-\\><C-n>")
+
 -- Better tabbing in visual mode
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
@@ -118,4 +122,3 @@ vim.keymap.set('n', '<leader>so', ':source $HOME/.config/nvim/lua/cfg/remap.lua<
 
 -- faster rm -rf for deleting folders (specially while on netrw)
 vim.keymap.set("n", "<leader>rm", ":!rm -rf ")
-
