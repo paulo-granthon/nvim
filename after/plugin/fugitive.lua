@@ -19,6 +19,8 @@ vim.keymap.set("n", "<leader>gR", ":G reset HEAD~")
 vim.keymap.set('n', '<leader>gK', ':G push -f ')
 vim.keymap.set('n', '<leader>gJ', ':G pull -f ')
 vim.keymap.set('n', '<leader>gI', ':G rebase -i ')
+vim.keymap.set('n', '<leader>gRc', ':G rebase --continue ')
+vim.keymap.set('n', '<leader>gRa', ':G rebase --abort ')
 
 -- info
 vim.keymap.set("n", "<leader>gd", ":G diff<CR>")
