@@ -82,16 +82,17 @@ return require('packer').startup(function(use)
     use 'numToStr/Comment.nvim'
 
     -- Git integration
-    use('tpope/vim-fugitive')
-    use('lewis6991/gitsigns.nvim')
-    use({
+    use 'tpope/vim-fugitive'
+    use 'rbong/vim-flog'
+    use 'lewis6991/gitsigns.nvim'
+    use {
         'luukvbaal/statuscol.nvim',
         config = function()
             require("statuscol").setup({
                 --
             })
         end
-    })
+    }
 
     use 'voldikss/vim-floaterm'
 
