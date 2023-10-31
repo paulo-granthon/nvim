@@ -24,6 +24,8 @@ vim.keymap.set('n', '<leader>gRa', ':G rebase --abort ')
 
 -- Merge conflict
 vim.keymap.set('n', '<leader>gD', ':Gvdiffsplit!<CR>')
+vim.keymap.set('n', '<leader>gDj', ':diffget //2<CR>')
+vim.keymap.set('n', '<leader>gDk', ':diffget //3<CR>')
 
 -- info
 vim.keymap.set("n", "<leader>gd", ":G diff<CR>")
