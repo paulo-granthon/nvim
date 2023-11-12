@@ -35,6 +35,7 @@ vim.keymap.set("n", "<leader>gbm", ":G blame<CR>")
 
 -- stashing
 vim.keymap.set("n", "<leader>gtk", ":G stash<CR>") -- add
+vim.keymap.set("n", "<leader>gtK", ":G stash --staged<CR>") -- add staged only
 vim.keymap.set("n", "<leader>gtj", ":G stash pop") -- pop
 vim.keymap.set("n", "<leader>gtd", ":G stash drop") -- drop
 vim.keymap.set("n", "<leader>gta", ":G stash apply") -- apply
