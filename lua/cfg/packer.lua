@@ -20,15 +20,11 @@ return require('packer').startup(function(use)
 
     -- sticky buffer list
     use 'ThePrimeagen/harpoon'
-
-    -- faster file navigation
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.3',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    -- file explorer sidebar
-    use 'nvim-neo-tree/neo-tree.nvim'
 
     -- everybody knows treesitter
     use {
@@ -48,13 +44,11 @@ return require('packer').startup(function(use)
     use {
         'dnlhc/glance.nvim',
         config = function()
-            require('glance').setup{
-                -- your configuration
-            }
+            require('glance').setup()
         end,
     }
 
-    -- better undo handling
+    -- undo tree history
     use 'mbbill/undotree'
 
     -- Auto pairs for '(', '[', '{'
@@ -80,7 +74,6 @@ return require('packer').startup(function(use)
         end,
     }
 
-    --
     use 'theprimeagen/refactoring.nvim'
     use 'numToStr/Comment.nvim'
 
