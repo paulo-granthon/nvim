@@ -8,21 +8,21 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim' -- Packer can manage itself
 
     -- colorscheme
-    use({
+    use {
         'navarasu/onedark.nvim',
         as = 'onedark',
         config = function()
         end
-    })
+    }
 
     -- colorize color codes for frontend dev :)
     use 'norcalli/nvim-colorizer.lua'
 
     -- sticky buffer list
-    use('ThePrimeagen/harpoon')
+    use 'ThePrimeagen/harpoon'
 
     -- faster file navigation
-    use{
+    use {
         'nvim-telescope/telescope.nvim', tag = '0.1.3',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
@@ -31,51 +31,54 @@ return require('packer').startup(function(use)
     use 'nvim-neo-tree/neo-tree.nvim'
 
     -- everybody knows treesitter
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use({
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        {run = ':TSUpdate'},
+    }
+    use {
         'nvim-treesitter/nvim-treesitter-context',
         config = function()
             vim.g['airline#extensions#tabline#enabled'] = 1
-            local group = vim.api.nvim_create_augroup("AirlineAutoRefresh", {clear = true})
-            vim.api.nvim_create_autocmd("BufEnter", { command = ":AirlineRefresh", group = group})
+            local group = vim.api.nvim_create_augroup('AirlineAutoRefresh', {clear = true})
+            vim.api.nvim_create_autocmd('BufEnter', { command = ':AirlineRefresh', group = group})
         end
-    })
+    }
 
     -- peeking
-    use({
-        "dnlhc/glance.nvim",
+    use {
+        'dnlhc/glance.nvim',
         config = function()
-            require('glance').setup({
+            require('glance').setup{
                 -- your configuration
-            })
+            }
         end,
-    })
+    }
 
     -- better undo handling
-    use('mbbill/undotree')
+    use 'mbbill/undotree'
 
     -- Auto pairs for '(', '[', '{'
-    use("jiangmiao/auto-pairs")
+    use 'jiangmiao/auto-pairs'
 
-    -- Quick surrounding with '(', '"', '{', etc
-    use({
-        "kylechui/nvim-surround",
-        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    -- Quick surrounding with '(', ''', '{', etc
+    use {
+        'kylechui/nvim-surround',
+        tag = '*', -- Use for stability; omit to use `main` branch for the latest features
         config = function()
-            require("nvim-surround").setup({
+            require('nvim-surround').setup{
                 -- Configuration here, or leave empty to use defaults
-            })
+            }
         end
-    })
+    }
 
     -- To expand or collapse blocks of code
-    use({
+    use {
         'Wansmer/treesj',
         requires = { 'nvim-treesitter' },
         config = function()
-            require('treesj').setup({--[[ your config ]]})
+            require('treesj').setup{--[[ your config ]]}
         end,
-    })
+    }
 
     --
     use 'theprimeagen/refactoring.nvim'
@@ -88,16 +91,16 @@ return require('packer').startup(function(use)
     use {
         'luukvbaal/statuscol.nvim',
         config = function()
-            require("statuscol").setup({
+            require('statuscol').setup{
                 --
-            })
+            }
         end
     }
 
     use 'voldikss/vim-floaterm'
 
     -- LSP
-    use{
+    use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
         requires = {
@@ -117,7 +120,7 @@ return require('packer').startup(function(use)
     }
 
     -- Rust utilities
-    use ('simrat39/rust-tools.nvim')
+    use 'simrat39/rust-tools.nvim'
     use {
         'saecki/crates.nvim',
         tag = 'v0.3.0',
@@ -128,35 +131,35 @@ return require('packer').startup(function(use)
     }
 
     -- Highlights repetitions of the word at the cursor
-    use ({
+    use {
         'RRethy/vim-illuminate',
         config = function ()
-            require('illuminate').configure({
+            require('illuminate').configure{
                 delay = 200,
                 under_cursor = false,
 
-            })
+            }
         end
-    })
+    }
 
     -- for Errors and Warnings
-    use({
-        "folke/trouble.nvim",
+    use {
+        'folke/trouble.nvim',
         requires = { 'nvim-tree/nvim-web-devicons' }
-    })
+    }
     -- icons
-    use('nvim-tree/nvim-web-devicons')
-    use('ryanoasis/vim-devicons')
+    use 'nvim-tree/nvim-web-devicons'
+    use 'ryanoasis/vim-devicons'
 
     --- Status bar - Airline
-    use('vim-airline/vim-airline')
-    use('vim-airline/vim-airline-themes')
+    use 'vim-airline/vim-airline'
+    use 'vim-airline/vim-airline-themes'
 
     -- better indentation indication
-    use "lukas-reineke/indent-blankline.nvim"
+    use 'lukas-reineke/indent-blankline.nvim'
 
     -- greeter
-    use{
+    use {
         'goolord/alpha-nvim',
         requires = { 'nvim-tree/nvim-web-devicons' },
         config = function ()
@@ -165,10 +168,10 @@ return require('packer').startup(function(use)
     }
 
     -- fun
-    use("eandrju/cellular-automaton.nvim")
+    use 'eandrju/cellular-automaton.nvim'
 
     -- hide sensitive data
-    use("laytan/cloak.nvim")
+    use 'laytan/cloak.nvim'
 
 
 
@@ -177,8 +180,8 @@ return require('packer').startup(function(use)
     use 'mfussenegger/nvim-jdtls'
 
     -- Markdown file preview
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
+    use {
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn['mkdp#util#install']() end,
+    }
 end)
