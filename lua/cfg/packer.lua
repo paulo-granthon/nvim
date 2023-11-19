@@ -166,6 +166,7 @@ return require('packer').startup(function(use)
     -- hide sensitive data
     use 'laytan/cloak.nvim'
 
+    use 'chrisgrieser/nvim-spider'
 
 
     -- JAVA
