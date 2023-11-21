@@ -71,7 +71,6 @@ vim.cmd([[command! -nargs=* -complete=command Sp sp]])
 vim.cmd([[command! -nargs=* -complete=command SP sp]])
 vim.keymap.set("n", "<leader>sp", ":sp<CR>");
 
--- "third leader " \
 -- window navigation
 vim.keymap.set({'n', 'v'}, '\\w', '<C-w>w')
 vim.keymap.set({'n', 'v'}, '\\h', '<C-w>h')
@@ -95,13 +94,16 @@ vim.keymap.set({'n', 'v'}, '\\-', '<C-w>-')
 vim.keymap.set({'n', 'v'}, '\\.', '<C-w>>')
 vim.keymap.set({'n', 'v'}, '\\,', '<C-w><')
 
--- resize windows faster
+vim.keymap.set({'n', 'v'}, '\\+', '<C-w>+4')
+vim.keymap.set({'n', 'v'}, '\\_', '<C-w>-4')
+vim.keymap.set({'n', 'v'}, '\\>', '<C-w>>4')
+vim.keymap.set({'n', 'v'}, '\\<', '<C-w><4')
+
 vim.keymap.set({'n', 'v'}, '<bar>+', '<C-w>16+')
 vim.keymap.set({'n', 'v'}, '<bar>_', '<C-w>16-')
 vim.keymap.set({'n', 'v'}, '<bar>>', '<C-w>16>')
 vim.keymap.set({'n', 'v'}, '<bar><', '<C-w>16<')
 
--- resize windows faster
 vim.keymap.set({'n', 'v'}, '<bar>=', '<C-w>48+')
 vim.keymap.set({'n', 'v'}, '<bar>-', '<C-w>48-')
 vim.keymap.set({'n', 'v'}, '<bar>.', '<C-w>48>')
