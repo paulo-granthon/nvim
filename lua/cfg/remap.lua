@@ -31,8 +31,8 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<C-L><C-L>", ":set invrelativenumber<CR>")
 
 -- Better Esc in insert mode
-vim.keymap.set({'i', 'v'}, "jk", "<Esc>")
-vim.keymap.set({'i', 'v'}, "kj", "<Esc>")
+vim.keymap.set("i", "jk", "<Esc>")
+vim.keymap.set("i", "kj", "<Esc>")
 
 -- Better exiting terminal insert mode
 vim.keymap.set("t", "jk", "<C-\\><C-n>")
