@@ -195,4 +195,10 @@ return require('packer').startup(function(use)
         'iamcco/markdown-preview.nvim',
         run = function() fn['mkdp#util#install']() end,
     }
+
+    -- Automatically run packer.clean() followed by packer.update() after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if PACKER_BOOTSTRAP then
+        require("packer").sync()
+    end
 end)
