@@ -1,5 +1,22 @@
 -- This file can be loaded by calling `lua require('packer')` from your init.vim
 
+local fn = vim.fn
+
+-- Automatically install packer
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+if fn.empty(fn.glob(install_path)) > 0 then
+    PACKER_BOOTSTRAP = fn.system({
+        "git",
+        "clone",
+        "--depth",
+        "1",
+        "https://github.com/wbthomason/packer.nvim",
+        install_path,
+    })
+    print("Installing packer close and reopen Neovim...")
+    vim.cmd([[packadd packer.nvim]])
+end
+
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
@@ -176,6 +193,6 @@ return require('packer').startup(function(use)
     -- Markdown file preview
     use {
         'iamcco/markdown-preview.nvim',
-        run = function() vim.fn['mkdp#util#install']() end,
+        run = function() fn['mkdp#util#install']() end,
     }
 end)
