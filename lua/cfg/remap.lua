@@ -131,5 +131,7 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 -- source new updated keybindings on this file from anywhere
 vim.keymap.set('n', '<leader>so', ':source $HOME/.config/nvim/lua/cfg/remap.lua<CR>');
 
--- faster rm -rf for deleting folders (specially while on netrw)
+-- unix commands
 vim.keymap.set("n", "<leader>rm", ":!rm -rf ")
+vim.keymap.set("n", "<leader>cp", ":!cp ")
+vim.keymap.set("n", "<leader>mv", ":!mv ")
