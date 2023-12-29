@@ -1,4 +1,5 @@
 require("cfg.remap")
+require("cfg.refactoring")
 require("cfg.set")
 require("cfg.filetypes")
 require('cfg.local')
