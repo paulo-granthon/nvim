@@ -4,9 +4,7 @@ function ColorMyPencils(color)
     if color then
         vim.cmd.colorscheme(color)
     else
-        require(DEFAULT_THEME).setup {
-            style = 'darker'
-        }
+        require(DEFAULT_THEME)
         require(DEFAULT_THEME).load()
         color = DEFAULT_THEME
     end

@@ -47,6 +47,9 @@ return require('packer').startup(function(use)
         'navarasu/onedark.nvim',
         as = 'onedark',
         config = function()
+            require('onedark').setup({
+                style = 'darker',
+            })
         end
     }
 
