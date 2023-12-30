@@ -3,17 +3,17 @@
 local fn = vim.fn
 
 -- Automatically install packer
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
     PACKER_BOOTSTRAP = fn.system({
-        "git",
-        "clone",
-        "--depth",
-        "1",
-        "https://github.com/wbthomason/packer.nvim",
+        'git',
+        'clone',
+        '--depth',
+        '1',
+        'https://github.com/wbthomason/packer.nvim',
         install_path,
     })
-    print("Installing packer close and reopen Neovim...")
+    print('Installing packer close and reopen Neovim...')
     vim.cmd([[packadd packer.nvim]])
 end
 
@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
         as = 'modus',
         config = function()
             require('modus-themes').setup({
-                style = "modus_vivendi",
+                style = 'modus_vivendi',
                 variant = 'default',
                 -- variant = 'tinted',
                 -- variant = 'deuteranopia',
@@ -225,6 +225,6 @@ return require('packer').startup(function(use)
     -- Automatically run packer.clean() followed by packer.update() after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
-        require("packer").sync()
+        require('packer').sync()
     end
 end)

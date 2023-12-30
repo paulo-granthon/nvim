@@ -1,12 +1,12 @@
-vim.api.nvim_create_autocmd("FileType", {
+vim.api.nvim_create_autocmd('FileType', {
     pattern = {
-        "html",
-        "css",
-        "js",
-        "ts",
-        "tsx",
-        "jsx",
-        "json",
+        'html',
+        'css',
+        'js',
+        'ts',
+        'tsx',
+        'jsx',
+        'json',
     },
     callback = function()
         vim.opt_local.shiftwidth = 2
@@ -14,10 +14,10 @@ vim.api.nvim_create_autocmd("FileType", {
     end
 })
 
-vim.api.nvim_create_autocmd("FileType", {
+vim.api.nvim_create_autocmd('FileType', {
     pattern = {
-        "js",
-        "Jsx",
+        'js',
+        'Jsx',
     },
     callback = function()
         require'lspconfig'.tsserver.setup{}
