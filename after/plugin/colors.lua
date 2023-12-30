@@ -16,7 +16,7 @@ function ColorMyPencils(color)
 
     local no_bg = { bg = "none" }
 
-    -- remove default neovim backgrounds
+    -- remove backgrounds
     vim.api.nvim_set_hl(0, "Normal", no_bg)
     vim.api.nvim_set_hl(0, "NormalFloat", no_bg)
     vim.api.nvim_set_hl(0, "EndOfBuffer", no_bg)
