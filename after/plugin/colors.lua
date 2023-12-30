@@ -1,13 +1,12 @@
 DEFAULT_THEME = 'onedark'
 
 function ColorMyPencils(color)
-    if color then
-        vim.cmd.colorscheme(color)
-    else
-        require(DEFAULT_THEME)
-        require(DEFAULT_THEME).load()
+    if not color then
         color = DEFAULT_THEME
     end
+
+    require(color).load()
+    vim.cmd.colorscheme(color)
 
     local no_bg = { bg = "none" }
 
