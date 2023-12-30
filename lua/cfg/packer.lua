@@ -59,7 +59,7 @@ return require('packer').startup(function(use)
     -- sticky buffer list
     use 'ThePrimeagen/harpoon'
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.3',
+        'nvim-telescope/telescope.nvim', tag = '0.1.5',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
