@@ -67,7 +67,10 @@ return require('packer').startup(function(use)
     -- everybody knows treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
-        {run = ':TSUpdate'},
+        run = function()
+            require('nvim-treesitter.install').update({ with_sync = true })()
+        end,
+
     }
     use {
         'nvim-treesitter/nvim-treesitter-context',
