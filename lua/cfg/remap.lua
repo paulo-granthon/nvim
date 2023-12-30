@@ -113,8 +113,8 @@ vim.keymap.set({'n', 'v'}, '<bar>,', '<C-w>48<')
 vim.keymap.set('x', '<leader>p', [['_dP]])
 
 -- next greatest remap ever : asbjornHaland | Allows copy to system clipboard
-vim.keymap.set({'n', 'v'}, '<leader>y', [['+y]])
-vim.keymap.set('n', '<leader>Y', [['+Y]])
+vim.keymap.set({'n', 'v'}, '<leader>y', [["+y]])
+vim.keymap.set('n', '<leader>Y', [["+Y]])
 
 -- Replace every instance of word at cursor
 vim.keymap.set('n', '<leader>rN', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>')
