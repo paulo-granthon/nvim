@@ -9,13 +9,15 @@ function ColorMyPencils(color)
         color = 'onedark'
     end
 
+    local no_bg = { bg = "none" }
+
     -- remove default neovim backgrounds
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+    vim.api.nvim_set_hl(0, "Normal", no_bg)
+    vim.api.nvim_set_hl(0, "NormalFloat", no_bg)
+    vim.api.nvim_set_hl(0, "EndOfBuffer", no_bg)
 
     -- remove gitsigns backgrounds
-    vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+    vim.api.nvim_set_hl(0, "SignColumn", no_bg)
 end
 
 ColorMyPencils()
