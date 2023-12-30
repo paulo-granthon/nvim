@@ -16,6 +16,16 @@ function ColorMyPencils(color)
     vim.api.nvim_set_hl(0, "NormalFloat", no_bg)
     vim.api.nvim_set_hl(0, "EndOfBuffer", no_bg)
 
+    local line_nr_colors = {
+        bg = "none",
+        fg = "gray"
+    }
+
+    -- remove line number column backgrounds
+    vim.api.nvim_set_hl(0, 'LineNrAbove', line_nr_colors)
+    vim.api.nvim_set_hl(0, 'LineNr', { fg = "white", bg = "none" })
+    vim.api.nvim_set_hl(0, 'LineNrBelow', line_nr_colors)
+
     -- remove gitsigns backgrounds
     vim.api.nvim_set_hl(0, "SignColumn", no_bg)
 end
