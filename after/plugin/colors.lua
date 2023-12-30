@@ -1,11 +1,17 @@
-DEFAULT_THEME = 'onedark'
+DEFAULT_THEME = 'modus'
+
+THEME_MODULE_NAME_MAP = {
+    ['modus'] = 'modus-themes',
+}
 
 function ColorMyPencils(color)
     if not color then
         color = DEFAULT_THEME
     end
 
-    require(color).load()
+    local module_name = THEME_MODULE_NAME_MAP[color] or color
+
+    require(module_name).load()
     vim.cmd.colorscheme(color)
 
     local no_bg = { bg = "none" }
