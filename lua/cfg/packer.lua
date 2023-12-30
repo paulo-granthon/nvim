@@ -92,6 +92,9 @@ return require('packer').startup(function(use)
     -- Auto pairs for '(', '[', '{'
     use 'jiangmiao/auto-pairs'
 
+    -- Rainbow colors for delimiters
+    use 'hiphish/rainbow-delimiters.nvim'
+
     -- Quick surrounding with '(', ''', '{', etc
     use {
         'kylechui/nvim-surround',
