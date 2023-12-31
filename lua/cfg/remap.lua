@@ -110,7 +110,7 @@ vim.keymap.set({'n', 'v'}, '<bar>.', '<C-w>48>')
 vim.keymap.set({'n', 'v'}, '<bar>,', '<C-w>48<')
 
 -- greatest remap ever | Pastes without losing the current paste buffer
-vim.keymap.set('x', '<leader>p', [['_dP]])
+vim.keymap.set('x', '<leader>p', [["_dP]])
 
 -- next greatest remap ever : asbjornHaland | Allows copy to system clipboard
 vim.keymap.set({'n', 'v'}, '<leader>y', [["+y]])
