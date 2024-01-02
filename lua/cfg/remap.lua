@@ -71,6 +71,9 @@ vim.cmd([[command! -nargs=* -complete=command VS vs]])
 vim.keymap.set('n', '<leader>sp', ':sp<CR>'); -- faster splits (horizontal)
 vim.keymap.set('n', '<leader>vs', ':vs<CR>'); -- faster splits (vertical)
 
+vim.keymap.set({'n', 'v'}, '<leader>vw', ':vs<CR><C-w>w') -- vertical split and focus on split
+vim.keymap.set({'n', 'v'}, '<leader>sw', ':sp<CR><C-w>w') -- horizontal split and focus on split
+
 -- window navigation
 vim.keymap.set({'n', 'v'}, '\\w', '<C-w>w')
 vim.keymap.set({'n', 'v'}, '\\h', '<C-w>h')
