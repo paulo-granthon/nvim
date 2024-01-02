@@ -62,14 +62,14 @@ vim.keymap.set({'n', 'v', 'i'}, '<C-End>', '<C-End>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
--- faster splits
-vim.cmd([[command! -nargs=* -complete=command Vs vs]])
-vim.cmd([[command! -nargs=* -complete=command VS vs]])
-vim.keymap.set('n', '<leader>vs', ':vs<CR>');
-
+-- Reduce typos when making splits
 vim.cmd([[command! -nargs=* -complete=command Sp sp]])
 vim.cmd([[command! -nargs=* -complete=command SP sp]])
-vim.keymap.set('n', '<leader>sp', ':sp<CR>');
+vim.cmd([[command! -nargs=* -complete=command Vs vs]])
+vim.cmd([[command! -nargs=* -complete=command VS vs]])
+
+vim.keymap.set('n', '<leader>sp', ':sp<CR>'); -- faster splits (horizontal)
+vim.keymap.set('n', '<leader>vs', ':vs<CR>'); -- faster splits (vertical)
 
 -- window navigation
 vim.keymap.set({'n', 'v'}, '\\w', '<C-w>w')
