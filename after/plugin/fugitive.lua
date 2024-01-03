@@ -1,11 +1,11 @@
--- base (in case I just want a quicker `:G ` written in my command line or fail to complete a combo after enough time)
+-- fallback -> type command without combo
 vim.keymap.set("n", "<leader>g", ":G ")
 
--- Git status
+-- Git status alternatives
 vim.keymap.set("n", "<leader>gs", ':G<CR>5j')                 -- fugitive interface with status and interative staging. 5j to move to first listed file
 vim.keymap.set("n", "<leader>gvs", ':G<CR><C-w>H5j')              -- vertical git status
 
--- basic commands
+-- basic workflow commands
 vim.keymap.set('n', '<leader>gf', ":G fetch<CR>")               -- fetch
 vim.keymap.set('n', '<leader>gj', ":G pull<CR>")                -- pull
 vim.keymap.set("n", "<leader>ga", ":G add ")                    -- opens git add command ready for parameters
@@ -41,12 +41,12 @@ vim.keymap.set("n", "<leader>gtd", ":G stash drop") -- drop
 vim.keymap.set("n", "<leader>gta", ":G stash apply") -- apply
 vim.keymap.set("n", "<leader>gts", ":G stash show<CR>") -- log
 
--- I'm gonna regret this later
+-- restore
 vim.keymap.set('n', '<leader>grf', ':G restore ')
 vim.keymap.set('n', '<leader>gra', ':G restore .')
 vim.keymap.set('n', '<leader>grc', ':G restore --cached ')
 
--- Git Branch commands
+-- branch
 vim.keymap.set('n', '<leader>gbc', ":G checkout ")              -- Checkout
 vim.keymap.set('n', '<leader>gbn', ":G checkout -b ")           -- Checkout new
 vim.keymap.set('n', '<leader>gm', ":G merge ")                  -- merge - requires argument
