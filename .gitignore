@@ -2,3 +2,4 @@ autoload/*
 plugin/packer_compiled.lua
 lua/cfg/local.lua
 workspace/
+env/
