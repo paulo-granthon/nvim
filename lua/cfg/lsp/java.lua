@@ -13,14 +13,14 @@ local root_dir = require("jdtls.setup").find_root(root_markers)
 local workspace_folder = home .. "/.local/share/eclipse/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
 
 -- Helper function for creating keymaps
-function nnoremap(rhs, lhs, bufopts, desc)
+local function nnoremap(rhs, lhs, bufopts, desc)
   bufopts.desc = desc
   vim.keymap.set("n", rhs, lhs, bufopts)
 end
 
 -- The on_attach function is used to set key maps after the language server
 -- attaches to the current buffer
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
   -- Regular Neovim LSP client keymappings
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
   nnoremap("gD", vim.lsp.buf.declaration, bufopts, "Go to declaration")
