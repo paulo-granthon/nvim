@@ -11,8 +11,13 @@ function ColorMyPencils(color)
 
     local module_name = THEME_MODULE_NAME_MAP[color] or color
 
-    require(module_name).load()
-    vim.cmd.colorscheme(color)
+    local theme_ok, theme_or_err = pcall(require, module_name)
+    if theme_ok then
+        theme_or_err.load()
+        vim.cmd.colorscheme(color)
+    else
+        vim.api.nvim_err_writeln(theme_or_err)
+    end
 
     local no_bg = { bg = "none" }
 
