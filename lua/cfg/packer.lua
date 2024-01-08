@@ -31,33 +31,35 @@ return require('packer').startup(function(use)
     use 'paulo-granthon/agitate.nvim'
 
     -- colorscheme
-    use {
-        'miikanissi/modus-themes.nvim',
-        as = 'modus',
-        config = function()
-            require('modus-themes').setup({
-                style = 'modus_vivendi',
-                variant = 'default',
-                -- variant = 'tinted',
-                -- variant = 'deuteranopia',
-                -- variant = 'tritanopia',
-                dim_inactive = false,
-                transparent = true,
-                styles = {
-                    functions = { bold = true, },
-                },
-            })
-        end
-    }
-    use {
-        'navarasu/onedark.nvim',
-        as = 'onedark',
-        config = function()
-            require('onedark').setup({
-                style = 'darker',
-            })
-        end
-    }
+    use 'paulo-granthon/hyper.nvim'
+
+    -- use {
+    --     'miikanissi/modus-themes.nvim',
+    --     as = 'modus',
+    --     config = function()
+    --         require('modus-themes').setup({
+    --             style = 'modus_vivendi',
+    --             variant = 'default',
+    --             -- variant = 'tinted',
+    --             -- variant = 'deuteranopia',
+    --             -- variant = 'tritanopia',
+    --             dim_inactive = false,
+    --             transparent = true,
+    --             styles = {
+    --                 functions = { bold = true, },
+    --             },
+    --         })
+    --     end
+    -- }
+    -- use {
+    --     'navarasu/onedark.nvim',
+    --     as = 'onedark',
+    --     config = function()
+    --         require('onedark').setup({
+    --             style = 'darker',
+    --         })
+    --     end
+    -- }
 
     -- colorize color codes for frontend dev :)
     use 'norcalli/nvim-colorizer.lua'

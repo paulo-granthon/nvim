@@ -1,4 +1,4 @@
-DEFAULT_THEME = 'modus'
+DEFAULT_THEME = 'hyper'
 
 THEME_MODULE_NAME_MAP = {
     ['modus'] = 'modus-themes',
