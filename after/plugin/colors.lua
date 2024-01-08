@@ -26,6 +26,13 @@ function ColorMyPencils(color)
     vim.api.nvim_set_hl(0, "NormalFloat", no_bg)
     vim.api.nvim_set_hl(0, "EndOfBuffer", no_bg)
 
+    vim.api.nvim_set_hl(0, 'TabLineFill', no_bg)
+    vim.api.nvim_set_hl(0, 'TabLine', no_bg)
+    vim.api.nvim_set_hl(0, 'TabLineSel', no_bg)
+
+    vim.api.nvim_set_hl(0, 'SpecialKey', no_bg)
+    vim.api.nvim_set_hl(0, 'NonText', no_bg)
+
     local line_nr_colors = {
         bg = "none",
         fg = "gray"
