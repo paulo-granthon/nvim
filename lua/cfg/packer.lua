@@ -100,7 +100,9 @@ return require('packer').startup(function(use)
     use 'mbbill/undotree'
 
     -- Auto pairs for '(', '[', '{'
-    use 'jiangmiao/auto-pairs'
+    use { 'windwp/nvim-autopairs', config = function()
+        require('nvim-autopairs').setup({ check_ts = true })
+    end}
 
     -- Rainbow colors for delimiters
     use 'hiphish/rainbow-delimiters.nvim'
