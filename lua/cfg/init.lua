@@ -1,3 +1,4 @@
+require('cfg.autocmd')
 require('cfg.remap')
 require('cfg.refactoring')
 require('cfg.set')
