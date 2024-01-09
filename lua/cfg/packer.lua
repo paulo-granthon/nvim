@@ -198,7 +198,7 @@ return require('packer').startup(function(use)
     -- for Errors and Warnings
     use {
         'folke/trouble.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons' }
+        requires = { 'nvim-tree/nvim-web-devicons' },
     }
     -- icons
     use 'nvim-tree/nvim-web-devicons'
@@ -211,15 +211,6 @@ return require('packer').startup(function(use)
     -- better indentation indication
     use 'lukas-reineke/indent-blankline.nvim'
 
-    -- greeter
-    use {
-        'goolord/alpha-nvim',
-        requires = { 'nvim-tree/nvim-web-devicons' },
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.startify'.config)
-        end
-    }
-
     -- fun
     use 'eandrju/cellular-automaton.nvim'
 
@@ -227,7 +218,6 @@ return require('packer').startup(function(use)
     use 'laytan/cloak.nvim'
 
     use 'chrisgrieser/nvim-spider'
-
 
     -- JAVA
     use 'mfussenegger/nvim-dap'
