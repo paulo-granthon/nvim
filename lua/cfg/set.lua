@@ -10,16 +10,6 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
--- disable backup & set undodir
-vim.opt.swapfile = false
-vim.opt.backup = false
-if package.config:sub(1,1) == '\\' then
-    vim.opt.undodir = os.getenv('LOCALAPPDATA') .. '\\.vim\\undodir' -- Windows
-else
-    vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir' -- Linux
-end
-vim.opt.undofile = true
-
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
