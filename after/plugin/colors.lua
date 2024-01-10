@@ -6,6 +6,10 @@ THEME_MODULE_NAME_MAP = {
 
 function ColorMyPencils(color)
     if not color then
+        if not DEFAULT_THEME or DEFAULT_THEME:len() < 1 then
+            vim.api.nvim_err_writeln('No default theme set')
+            return
+        end
         color = DEFAULT_THEME
     end
 
