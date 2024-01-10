@@ -9,7 +9,3 @@ else
 end
 
 vim.opt.undofile = true
-
-vim.opt.incsearch = true
-
-
