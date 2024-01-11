@@ -81,15 +81,15 @@ vim.keymap.set('n', '<leader>vs', ':vs<CR>'); -- faster splits (vertical)
 vim.keymap.set({'n', 'v'}, '<leader>vw', ':vs<CR><C-w>w') -- vertical split and focus on split
 vim.keymap.set({'n', 'v'}, '<leader>sw', ':sp<CR><C-w>w') -- horizontal split and focus on split
 
--- window navigation
+-- pane navigation / focusing
 vim.keymap.set({'n', 'v'}, '\\w', '<C-w>w')
 vim.keymap.set({'n', 'v'}, '\\h', '<C-w>h')
 vim.keymap.set({'n', 'v'}, '\\j', '<C-w>j')
 vim.keymap.set({'n', 'v'}, '\\k', '<C-w>k')
 vim.keymap.set({'n', 'v'}, '\\l', '<C-w>l')
+vim.keymap.set({'n', 'v'}, '\\W', '<C-w>W') -- focus on last focused window
 
--- window navigation reverse
-vim.keymap.set({'n', 'v'}, '\\W', '<C-w>W')
+-- pane repositioning
 vim.keymap.set({'n', 'v'}, '\\H', '<C-w>H')
 vim.keymap.set({'n', 'v'}, '\\J', '<C-w>J')
 vim.keymap.set({'n', 'v'}, '\\K', '<C-w>K')
@@ -98,22 +98,25 @@ vim.keymap.set({'n', 'v'}, '\\L', '<C-w>L')
 -- equalize window sizes
 vim.keymap.set({'n', 'v'}, '\\<BS>', '<C-w>=')
 
--- resize windows
+-- resize windows (1 tile)
 vim.keymap.set({'n', 'v'}, '\\=', '<C-w>+')
 vim.keymap.set({'n', 'v'}, '\\-', '<C-w>-')
 vim.keymap.set({'n', 'v'}, '\\.', '<C-w>>')
 vim.keymap.set({'n', 'v'}, '\\,', '<C-w><')
 
+-- resize windows (4 tiles)
 vim.keymap.set({'n', 'v'}, '\\+', '<C-w>+4')
 vim.keymap.set({'n', 'v'}, '\\_', '<C-w>-4')
 vim.keymap.set({'n', 'v'}, '\\>', '<C-w>>4')
 vim.keymap.set({'n', 'v'}, '\\<', '<C-w><4')
 
+-- resize windows (16 tiles)
 vim.keymap.set({'n', 'v'}, '<bar>+', '<C-w>16+')
 vim.keymap.set({'n', 'v'}, '<bar>_', '<C-w>16-')
 vim.keymap.set({'n', 'v'}, '<bar>>', '<C-w>16>')
 vim.keymap.set({'n', 'v'}, '<bar><', '<C-w>16<')
 
+-- resize windows (48 tiles)
 vim.keymap.set({'n', 'v'}, '<bar>=', '<C-w>48+')
 vim.keymap.set({'n', 'v'}, '<bar>-', '<C-w>48-')
 vim.keymap.set({'n', 'v'}, '<bar>.', '<C-w>48>')
