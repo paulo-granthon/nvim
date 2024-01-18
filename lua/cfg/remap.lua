@@ -31,8 +31,7 @@ vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 vim.keymap.set('n', '<C-L><C-L>', ':set invrelativenumber<CR>')
 
 -- Sometimes is useful to have line wrap on
-local toggle_line_wrap = function() vim.wo.wrap = not vim.wo.wrap end
-vim.keymap.set('n', '<leader>tlw', toggle_line_wrap)
+vim.keymap.set('n', '<leader>tlw', function() vim.wo.wrap = not vim.wo.wrap end)
 
 -- Better Esc in insert mode
 vim.keymap.set('i', 'jk', '<Esc>')
