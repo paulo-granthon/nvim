@@ -145,6 +145,6 @@ vim.keymap.set('n', '<leader>mr', '<cmd>CellularAutomaton make_it_rain<CR>');
 vim.keymap.set('n', '<leader>so', ':source $HOME/.config/nvim/lua/cfg/remap.lua<CR>');
 
 -- unix commands
-vim.keymap.set('n', '<leader>rm', ':!rm -rf ')
-vim.keymap.set('n', '<leader>cp', ':!cp ')
-vim.keymap.set('n', '<leader>mv', ':!mv ')
+vim.keymap.set('n', '<leader>rm', ':!rm -rf ') -- remove file or directory recursively (specify path)
+vim.keymap.set('n', '<leader>cp', ':!cp ') -- copy file or directory (specify path)
+vim.keymap.set('n', '<leader>mv', ':!mv ') -- move file or directory (specify path)
