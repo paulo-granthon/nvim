@@ -141,8 +141,11 @@ vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true })
 -- make it rain :D
 vim.keymap.set('n', '<leader>mr', '<cmd>CellularAutomaton make_it_rain<CR>');
 
--- source new updated keybindings on this file from anywhere
-vim.keymap.set('n', '<leader>so', ':source $HOME/.config/nvim/lua/cfg/remap.lua<CR>');
+-- source new updated configs from anywhere
+vim.keymap.set('n', '<leader>so', function()
+    require('cfg')
+    vim.cmd(':source $HOME/.config/nvim/lua/cfg/remap.lua')
+end);
 
 -- unix commands
 vim.keymap.set('n', '<leader>rm', ':!rm -rf ') -- remove file or directory recursively (specify path)
