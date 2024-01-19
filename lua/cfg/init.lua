@@ -1,5 +1,6 @@
 require('cfg.autocmd')
 require('cfg.remap')
+require('cfg.lazy')
 require('cfg.refactoring')
 require('cfg.set')
 require('cfg.filetypes')
