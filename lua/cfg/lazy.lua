@@ -26,7 +26,7 @@ return require('lazy').setup({
 
     -- {
     --     'miikanissi/modus-themes.nvim',
-    --     as = 'modus',
+    --     name = 'modus',
     --     config = function()
     --         require('modus-themes').setup({
     --             style = 'modus_vivendi',
@@ -44,7 +44,7 @@ return require('lazy').setup({
     -- },
     -- use {
     --     'navarasu/onedark.nvim',
-    --     as = 'onedark',
+    --     name = 'onedark',
     --     config = function()
     --         require('onedark').setup({
     --             style = 'darker',
