@@ -1,3 +1,5 @@
+if true then return end
+
 local home = os.getenv("HOME")
 local jdtls = require("jdtls")
 

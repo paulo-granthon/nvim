@@ -1,3 +1,5 @@
+vim.opt.termguicolors = true
+
 require 'colorizer'.setup(
   { '*' }, {
     RGB      = true; -- 'red' "green" blue #123123
