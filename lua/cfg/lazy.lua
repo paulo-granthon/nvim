@@ -163,6 +163,11 @@ return require('lazy').setup({
         }
     },
 
+    {
+      'stevearc/conform.nvim',
+      event = { 'BufReadPre', 'BufNewFile' },
+    },
+
     -- Rust utilities
     'simrat39/rust-tools.nvim',
     {
