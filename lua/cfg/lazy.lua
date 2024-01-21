@@ -163,9 +163,17 @@ return require('lazy').setup({
         }
     },
 
+    -- formatting
     {
       'stevearc/conform.nvim',
       event = { 'BufReadPre', 'BufNewFile' },
+    },
+
+    -- linting
+    {
+      'mfussenegger/nvim-lint',
+      event = { 'BufReadPre', 'BufNewFile' },
+      name = 'lint'
     },
 
     -- Rust utilities
