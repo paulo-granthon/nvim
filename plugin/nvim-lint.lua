@@ -3,14 +3,12 @@ local nvim_lint_ok, nvim_lint_or_err = pcall(require, 'lint')
 if not nvim_lint_ok then return nvim_lint_or_err end
 local lint = nvim_lint_or_err
 
-print('hello motherfucker')
-
 lint.linters_by_ft = {
-  javascript = { 'eslint_d' },
-  typescript = { 'eslint_d' },
-  javascriptreact = { 'eslint_d' },
-  typescriptreact = { 'eslint_d' },
-  svelte = { 'eslint_d' },
+  javascript = { 'eslint' },
+  typescript = { 'eslint' },
+  javascriptreact = { 'eslint' },
+  typescriptreact = { 'eslint' },
+  svelte = { 'eslint' },
   lua = { 'luacheck' },
   rust = { 'cargo' },
   python = { 'pylint' },
