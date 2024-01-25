@@ -23,7 +23,7 @@ lint.linters_by_ft = {
   html = { 'htmlhint' },
   css = { 'stylelint' },
   dockerfile = { 'hadolint' },
-  sql = { 'sqlint' },
+  sql = { 'sqlfluff' },
 }
 
 local lint_augroup = vim.api.nvim_create_augroup('nvim-lint', { clear = true })
