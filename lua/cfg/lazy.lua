@@ -15,7 +15,12 @@ vim.opt.rtp:prepend(lazypath)
 
 return require('lazy').setup({
 
-  'tpope/vim-vinegar',
+  {
+    'stevearc/oil.nvim',
+    event = { 'VimEnter' },
+    lazy = false,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 
   'github/copilot.vim',
 
