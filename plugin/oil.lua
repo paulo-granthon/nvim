@@ -1,4 +1,8 @@
-require('oil').setup({
+local oil_ok, oil_or_err = pcall(require, 'oil')
+if not oil_ok then return oil_or_err end
+local oil = oil_or_err
+
+oil.setup({
   skip_confirm_for_simple_edits = true,
   view_options = {
     show_hidden = true,
