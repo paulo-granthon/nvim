@@ -29,6 +29,9 @@ vim.keymap.set('n', ';wq', ':w<CR>:Ex<CR>')
 -- Easy netrw
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
+-- Inspect all the items at the current buffer position
+vim.keymap.set('n', '<leader>i', vim.show_pos)
+
 -- Toggle relativenumber - number
 vim.keymap.set('n', '<C-L><C-L>', ':set invrelativenumber<CR>')
 
