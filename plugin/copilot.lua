@@ -1,3 +1,5 @@
+-- luacheck: globals vim
+
 vim.g.copilot_filetypes = {
     ["*"] = true,
 }

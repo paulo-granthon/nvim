@@ -1,3 +1,5 @@
+-- luacheck: globals lsp client_capabilities
+
 local lsp_ok, lsp_or_err = pcall(require, 'lsp')
 if not lsp_ok then return lsp_or_err end
 

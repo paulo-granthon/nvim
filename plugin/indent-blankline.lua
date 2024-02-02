@@ -1,3 +1,5 @@
+-- luacheck: globals vim
+
 vim.opt.termguicolors = true
 vim.opt.list = true
 vim.opt.listchars:append 'trail: '
