@@ -5,7 +5,7 @@ local theme_module_name_map = {
     ['modus'] = 'modus-themes',
 }
 
-function ColorMyPencils(color)
+local function colorMyPencils(color)
     if not color then
         if not default_theme or default_theme:len() < 1 then
             vim.api.nvim_err_writeln('No default theme set')
@@ -52,4 +52,4 @@ function ColorMyPencils(color)
     vim.api.nvim_set_hl(0, 'SignColumn', no_bg)
 end
 
-ColorMyPencils()
+colorMyPencils()
