@@ -1,3 +1,4 @@
+-- luacheck: ignore 021 511 631
 if true then return end
 
 local home = os.getenv("HOME")
