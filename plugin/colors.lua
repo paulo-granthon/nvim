@@ -1,19 +1,20 @@
-DEFAULT_THEME = 'hyper'
 
-THEME_MODULE_NAME_MAP = {
+local default_theme = 'hyper'
+
+local theme_module_name_map = {
     ['modus'] = 'modus-themes',
 }
 
 function ColorMyPencils(color)
     if not color then
-        if not DEFAULT_THEME or DEFAULT_THEME:len() < 1 then
+        if not default_theme or default_theme:len() < 1 then
             vim.api.nvim_err_writeln('No default theme set')
             return
         end
-        color = DEFAULT_THEME
+        color = default_theme
     end
 
-    local module_name = THEME_MODULE_NAME_MAP[color] or color
+    local module_name = theme_module_name_map[color] or color
 
     local theme_ok, theme_or_err = pcall(require, module_name)
     if theme_ok then
