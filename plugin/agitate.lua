@@ -12,6 +12,6 @@ agitate_or_err.setup(env_ok and env_or_err or {
 })
 
 -- Set keybindings
-vim.keymap.set('n', '<leader>gil', ':AgitateRepoInitGitHub')
-vim.keymap.set('n', '<leader>gir', ':AgitateRepoCreateGitHub')
+vim.keymap.set('n', '<leader>gil', ':AgitateRepoInitGitHub ')
+vim.keymap.set('n', '<leader>gir', ':AgitateRepoCreateGitHub ')
 vim.keymap.set('n', '<leader>gbp', ':AgitateBranchCreateCheckoutAndPush ')
