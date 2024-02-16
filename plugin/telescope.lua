@@ -35,4 +35,11 @@ local function get_selected_text()
   return table.concat(selected_text_table, '\n')
 end
 
+vim.keymap.set('v', '<leader>ps', function()
+  builtin.grep_string({
+    search = get_selected_text(),
+    use_regex = true,
+  })
+end)
+
 end)
