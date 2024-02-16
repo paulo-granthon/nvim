@@ -31,34 +31,6 @@ return require('lazy').setup({
   -- colorscheme
   'paulo-granthon/hyper.nvim',
 
-  -- {
-  --     'miikanissi/modus-themes.nvim',
-  --     name = 'modus',
-  --     config = function()
-  --         require('modus-themes').setup({
-  --             style = 'modus_vivendi',
-  --             variant = 'default',
-  --             -- variant = 'tinted',
-  --             -- variant = 'deuteranopia',
-  --             -- variant = 'tritanopia',
-  --             dim_inactive = false,
-  --             transparent = true,
-  --             styles = {
-  --                 functions = { bold = true, },
-  --             },
-  --         })
-  --     end
-  -- },
-  -- use {
-  --     'navarasu/onedark.nvim',
-  --     name = 'onedark',
-  --     config = function()
-  --         require('onedark').setup({
-  --             style = 'darker',
-  --         })
-  --     end
-  -- }
-
   -- colorize color codes for frontend dev :)
   'norcalli/nvim-colorizer.lua',
 
