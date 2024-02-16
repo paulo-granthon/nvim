@@ -20,7 +20,7 @@ conform.setup({
     toml = { 'prettier' },
     sh = { 'shfmt' },
     css = { 'prettier' },
-    cs = { "csharpier" },
+    cs = { 'csharpier' },
   },
 })
 

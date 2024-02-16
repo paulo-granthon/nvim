@@ -1,14 +1,18 @@
 -- luacheck: globals vim
 
 vim.g.copilot_filetypes = {
-    ["*"] = true,
+  ['*'] = true,
 }
 
 vim.g.copilot_no_tab_map = true
-vim.keymap.set(
-    'i', '<C-a>', "copilot#Accept('<CR>')",
-    { noremap = true, silent = true, expr = true, replace_keycodes = false }
-)
+local opts = {
+  noremap = true,
+  silent = true,
+  expr = true,
+  replace_keycodes = false,
+}
+
+vim.keymap.set('i', '<C-a>', "copilot#Accept('<CR>')", opts)
 
 -- <C-]>                   Dismiss the current suggestion.
 -- <Plug>(copilot-dismiss)

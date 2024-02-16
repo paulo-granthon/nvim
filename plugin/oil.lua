@@ -33,17 +33,14 @@ local function open_with_oil(path)
 
   --prepend directory with pwd if it's not an absolute path or ~/...
   if not vim.startswith(directory, '/') and not vim.startswith(directory, '~') then
-    directory = vim.fn.fnamemodify(vim.fn.getcwd() .. '/' .. directory, ':p')
+    local directory_full_path = vim.fn.getcwd() .. '/' .. directory
+    directory = vim.fn.fnamemodify(directory_full_path, ':p')
   end
 
-  if vim.fn.isdirectory(directory) == 0 then
-    return false
-  end
+  if vim.fn.isdirectory(directory) == 0 then return false end
 
   --check if directory exists
-  if vim.fn.filereadable(directory) == 1 then
-    directory = vim.fn.fnamemodify(directory, ':h')
-  end
+  if vim.fn.filereadable(directory) == 1 then directory = vim.fn.fnamemodify(directory, ':h') end
 
   vim.cmd('Oil ' .. directory)
   return true
