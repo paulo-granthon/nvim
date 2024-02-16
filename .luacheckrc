@@ -1,3 +1,5 @@
-read_globals = {
-  "vim",
+globals = {
+  'globals',
+  'vim',
+  'lsp'
 }
