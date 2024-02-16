@@ -13,17 +13,6 @@ local opts = {
 }
 
 vim.keymap.set('i', '<C-a>', "copilot#Accept('<CR>')", opts)
-
--- <C-]>                   Dismiss the current suggestion.
--- <Plug>(copilot-dismiss)
---
---                                                 *copilot-i_ALT-]*
--- <M-]>                   Cycle to the next suggestion, if one is available.
--- <Plug>(copilot-next)
---
---                                                 *copilot-i_ALT-[*
--- <M-[>                   Cycle to the previous suggestion.
--- <Plug>(copilot-previous)
 vim.keymap.set('i', '<C-x>', "copilot#Dismiss()", opts)
 vim.keymap.set('i', '<C-j>', "copilot#Next()", opts)
 vim.keymap.set('i', '<C-k>', "copilot#Previous()", opts)
