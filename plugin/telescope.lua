@@ -42,4 +42,10 @@ vim.keymap.set('v', '<leader>ps', function()
   })
 end)
 
+local esc_seach = vim.api.nvim_replace_termcodes('<Esc>?', true, false, true)
+
+vim.keymap.set('v', '?', function()
+  local selected_text = get_selected_text()
+  vim.api.nvim_feedkeys(esc_seach, 'n', false)
+  vim.api.nvim_feedkeys(selected_text, 'n', false)
 end)
