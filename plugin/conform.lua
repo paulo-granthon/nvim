@@ -14,7 +14,7 @@ conform.setup({
     lua = { 'stylua' },
     python = { 'isort', 'black' },
     rust = { 'rustfmt' },
-    go = { 'gofmt' },
+    go = { 'gofumpt' },
     markdown = { 'prettier' },
     yaml = { 'prettier' },
     toml = { 'prettier' },
