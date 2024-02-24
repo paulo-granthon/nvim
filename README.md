@@ -1,9 +1,8 @@
 # nvim/
 
-<a href="https://dotfyle.com/paulo-granthon/nvim"><img src="https://dotfyle.com/paulo-granthon/nvim/badges/plugins?style=flat" /></a>
-<a href="https://dotfyle.com/paulo-granthon/nvim"><img src="https://dotfyle.com/paulo-granthon/nvim/badges/leaderkey?style=flat" /></a>
-<a href="https://dotfyle.com/paulo-granthon/nvim"><img src="https://dotfyle.com/paulo-granthon/nvim/badges/plugin-manager?style=flat" /></a>
-
+<a href="https://dotfyle.com/paulo-granthon/nvim"><img src="https://dotfyle.com/paulo-granthon/nvim/badges/plugins?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/paulo-granthon/nvim"><img src="https://dotfyle.com/paulo-granthon/nvim/badges/leaderkey?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/paulo-granthon/nvim"><img src="https://dotfyle.com/paulo-granthon/nvim/badges/plugin-manager?style=for-the-badge" /></a>
 
 ## Install Instructions
 
@@ -13,7 +12,7 @@ Clone the repository and install the plugins:
 
 ```sh
 git clone git@github.com:paulo-granthon/nvim ~/.config/paulo-granthon/nvim
-NVIM_APPNAME=paulo-granthon/nvim/ nvim --headless +"PackerSync" +qa
+NVIM_APPNAME=paulo-granthon/nvim/ nvim --headless +"Lazy! sync" +qa
 ```
 
 Open Neovim with this config:
@@ -27,10 +26,6 @@ NVIM_APPNAME=paulo-granthon/nvim/ nvim
 ### bars-and-lines
 
 + [luukvbaal/statuscol.nvim](https://dotfyle.com/plugins/luukvbaal/statuscol.nvim)
-### colorscheme
-
-+ [miikanissi/modus-themes.nvim](https://dotfyle.com/plugins/miikanissi/modus-themes.nvim)
-+ [navarasu/onedark.nvim](https://dotfyle.com/plugins/navarasu/onedark.nvim)
 ### comment
 
 + [numToStr/Comment.nvim](https://dotfyle.com/plugins/numToStr/Comment.nvim)
@@ -49,24 +44,34 @@ NVIM_APPNAME=paulo-granthon/nvim/ nvim
 + [folke/trouble.nvim](https://dotfyle.com/plugins/folke/trouble.nvim)
 ### editing-support
 
-+ [nvim-treesitter/nvim-treesitter-context](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter-context)
 + [windwp/nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
 + [windwp/nvim-ts-autotag](https://dotfyle.com/plugins/windwp/nvim-ts-autotag)
 + [Wansmer/treesj](https://dotfyle.com/plugins/Wansmer/treesj)
++ [nvim-treesitter/nvim-treesitter-context](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter-context)
+### file-explorer
+
++ [stevearc/oil.nvim](https://dotfyle.com/plugins/stevearc/oil.nvim)
+### formatting
+
++ [stevearc/conform.nvim](https://dotfyle.com/plugins/stevearc/conform.nvim)
 ### fuzzy-finder
 
 + [nvim-telescope/telescope.nvim](https://dotfyle.com/plugins/nvim-telescope/telescope.nvim)
 ### git
 
 + [lewis6991/gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)
+### golang
+
++ [ray-x/go.nvim](https://dotfyle.com/plugins/ray-x/go.nvim)
 ### indent
 
 + [lukas-reineke/indent-blankline.nvim](https://dotfyle.com/plugins/lukas-reineke/indent-blankline.nvim)
 ### lsp
 
++ [mfussenegger/nvim-lint](https://dotfyle.com/plugins/mfussenegger/nvim-lint)
 + [neovim/nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)
-+ [mfussenegger/nvim-jdtls](https://dotfyle.com/plugins/mfussenegger/nvim-jdtls)
 + [VonHeikemen/lsp-zero.nvim](https://dotfyle.com/plugins/VonHeikemen/lsp-zero.nvim)
++ [mfussenegger/nvim-jdtls](https://dotfyle.com/plugins/mfussenegger/nvim-jdtls)
 ### lsp-installer
 
 + [williamboman/mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)
@@ -81,19 +86,21 @@ NVIM_APPNAME=paulo-granthon/nvim/ nvim
 + [chrisgrieser/nvim-spider](https://dotfyle.com/plugins/chrisgrieser/nvim-spider)
 ### nvim-dev
 
++ [ray-x/guihua.lua](https://dotfyle.com/plugins/ray-x/guihua.lua)
 + [nvim-lua/plenary.nvim](https://dotfyle.com/plugins/nvim-lua/plenary.nvim)
 ### plugin-manager
 
-+ [wbthomason/packer.nvim](https://dotfyle.com/plugins/wbthomason/packer.nvim)
++ [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)
 ### snippet
 
 + [L3MON4D3/LuaSnip](https://dotfyle.com/plugins/L3MON4D3/LuaSnip)
 ### syntax
 
-+ [kylechui/nvim-surround](https://dotfyle.com/plugins/kylechui/nvim-surround)
 + [nvim-treesitter/nvim-treesitter](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter)
++ [kylechui/nvim-surround](https://dotfyle.com/plugins/kylechui/nvim-surround)
 ## Language Servers
 
++ eslint
 + html
 + jdtls
 + lua_ls
