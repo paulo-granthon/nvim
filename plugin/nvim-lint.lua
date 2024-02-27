@@ -20,7 +20,6 @@ lint.linters_by_ft = {
   java = { 'checkstyle' },
   cpp = { 'cpplint' },
   c = { 'cpplint' },
-  html = { 'htmlhint' },
   css = { 'stylelint' },
   dockerfile = { 'hadolint' },
   sql = { 'sqlfluff' },
