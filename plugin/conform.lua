@@ -9,6 +9,7 @@ conform.setup({
     typescript = { 'prettier' },
     typescriptreact = { 'prettier' },
     javascriptreact = { 'prettier' },
+    java = { 'google-java-format' },
     json = { 'prettier' },
     html = { 'prettier' },
     lua = { 'stylua' },
