@@ -127,6 +127,7 @@ return require('lazy').setup({
       { 'neovim/nvim-lspconfig' }, -- Required
       { 'williamboman/mason.nvim', build = ':MasonUpdate' }, -- Optional
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+      { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
 
       -- Autocompletion
       { 'hrsh7th/nvim-cmp' }, -- Required
