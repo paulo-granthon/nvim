@@ -14,6 +14,6 @@ mason_tool_installer.setup({
     'gofumpt',
     'shfmt',
     'csharpier',
-    'sql-formatter',
+    'sqlfluff',
   },
 })
