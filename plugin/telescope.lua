@@ -47,9 +47,18 @@ vim.keymap.set('v', '<leader>ps', function()
 end)
 
 local esc_seach = vim.api.nvim_replace_termcodes('<Esc>?', true, false, true)
+local esc_find = vim.api.nvim_replace_termcodes('<Esc>:%s/', true, false, true)
+local replace = vim.api.nvim_replace_termcodes('/', true, false, true)
 
 vim.keymap.set('v', '?', function()
   local selected_text = get_selected_text()
   vim.api.nvim_feedkeys(esc_seach, 'n', false)
   vim.api.nvim_feedkeys(selected_text, 'n', false)
+end)
+
+vim.keymap.set('v', 'S', function()
+  local selected_text = get_selected_text()
+  vim.api.nvim_feedkeys(esc_find, 'n', false)
+  vim.api.nvim_feedkeys(selected_text, 'n', false)
+  vim.api.nvim_feedkeys(replace, 'n', false)
 end)
