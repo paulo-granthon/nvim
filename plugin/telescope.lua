@@ -56,7 +56,7 @@ vim.keymap.set('v', '?', function()
   vim.api.nvim_feedkeys(selected_text, 'n', false)
 end)
 
-vim.keymap.set('v', 'S', function()
+vim.keymap.set('v', '<C-s>', function()
   local selected_text = get_selected_text()
   vim.api.nvim_feedkeys(esc_find, 'n', false)
   vim.api.nvim_feedkeys(selected_text, 'n', false)
