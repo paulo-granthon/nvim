@@ -17,7 +17,6 @@ lint.linters_by_ft = {
   yaml = { 'yamllint' },
   json = { 'jsonlint' },
   markdown = { 'markdownlint' },
-  java = { 'checkstyle' },
   cpp = { 'cpplint' },
   c = { 'cpplint' },
   css = { 'stylelint' },
