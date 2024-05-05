@@ -18,6 +18,10 @@ vim.opt.rtp:prepend(lazypath)
 
 return require('lazy').setup({
 
+  'paulo-granthon/agitate.nvim',
+
+  -- colorscheme
+  'paulo-granthon/hyper.nvim',
 
   {
     'stevearc/oil.nvim',
@@ -27,11 +31,6 @@ return require('lazy').setup({
   },
 
   'github/copilot.vim',
-
-  'paulo-granthon/agitate.nvim',
-
-  -- colorscheme
-  'paulo-granthon/hyper.nvim',
 
   -- colorize color codes for frontend dev :)
   'norcalli/nvim-colorizer.lua',
