@@ -9,6 +9,7 @@ vim.api.nvim_create_autocmd('FileType', {
     'tsx',
     'jsx',
     'json',
+    'vue',
   },
   callback = function()
     vim.opt_local.shiftwidth = 2
@@ -20,6 +21,7 @@ vim.api.nvim_create_autocmd('FileType', {
   pattern = {
     'js',
     'Jsx',
+    'vue',
   },
   callback = function() require('lspconfig').tsserver.setup({}) end,
 })

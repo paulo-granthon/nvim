@@ -9,6 +9,7 @@ lint.linters_by_ft = {
   javascriptreact = { 'eslint' },
   typescriptreact = { 'eslint' },
   svelte = { 'eslint' },
+  vue = { 'eslint' },
   lua = { 'luacheck' },
   rust = { 'cargo' },
   python = { 'pylint' },
