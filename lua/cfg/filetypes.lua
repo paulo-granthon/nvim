@@ -5,9 +5,9 @@ vim.api.nvim_create_autocmd('FileType', {
     'html',
     'css',
     'js',
+    'jsx',
     'ts',
     'tsx',
-    'jsx',
     'json',
     'vue',
   },
@@ -20,7 +20,9 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.api.nvim_create_autocmd('FileType', {
   pattern = {
     'js',
-    'Jsx',
+    'jsx',
+    'ts',
+    'tsx',
     'vue',
   },
   callback = function() require('lspconfig').tsserver.setup({}) end,
