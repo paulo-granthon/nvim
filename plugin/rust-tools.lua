@@ -14,7 +14,6 @@ local opts = {
   },
   server = {
     on_attach = function(_, bufnr)
-      print('on attach rust-tools')
       -- Hover actions
       vim.keymap.set('n', '<C-space>', require('rust-tools').hover_actions.hover_actions, { buffer = bufnr })
       -- Code action groups
