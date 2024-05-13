@@ -11,7 +11,6 @@ lint.linters_by_ft = {
   svelte = { 'eslint' },
   vue = { 'eslint' },
   lua = { 'luacheck' },
-  rust = { 'cargo' },
   python = { 'pylint' },
   go = { 'golangcilint' },
   sh = { 'shellcheck' },
