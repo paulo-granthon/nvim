@@ -21,7 +21,6 @@ lint.linters_by_ft = {
   c = { 'cpplint' },
   css = { 'stylelint' },
   dockerfile = { 'hadolint' },
-  sql = { 'sqlfluff' },
 }
 
 local lint_augroup = vim.api.nvim_create_augroup('nvim-lint', { clear = true })

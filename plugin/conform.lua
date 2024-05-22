@@ -23,7 +23,6 @@ conform.setup({
     sh = { 'shfmt' },
     css = { 'prettier' },
     cs = { 'csharpier' },
-    sql = { 'sqlfluff' },
   },
 })
 
