@@ -5,7 +5,7 @@ vim.keymap.set('n', '<leader>g', ':G ')
 vim.keymap.set('n', '<leader>gs', ':G<CR>5j')
 vim.keymap.set('n', '<leader>gvs', ':G<CR><C-w>H5j')
 
--- basic workflow commands
+-- basic workflow
 vim.keymap.set('n', '<leader>gf', ':G fetch<CR>')
 vim.keymap.set('n', '<leader>gj', ':G pull<CR>')
 vim.keymap.set('n', '<leader>ga', ':G add ')
@@ -14,7 +14,7 @@ vim.keymap.set('n', '<leader>gC', ':G commit --amend')
 vim.keymap.set('n', '<leader>gk', ':G push ')
 vim.keymap.set('n', '<leader>guk', ':G push -u origin ')
 
--- "advanced" commands
+-- "advanced"
 vim.keymap.set('n', '<leader>gF', ':G fetch --all<CR>')
 vim.keymap.set('n', '<leader>gR', ':G reset HEAD~')
 vim.keymap.set('n', '<leader>gK', ':G push -f ')
