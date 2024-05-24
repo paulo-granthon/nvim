@@ -14,14 +14,16 @@ vim.keymap.set('n', '<leader>gC', ':G commit --amend')
 vim.keymap.set('n', '<leader>gk', ':G push ')
 vim.keymap.set('n', '<leader>guk', ':G push -u origin ')
 
+-- rebase
+vim.keymap.set('n', '<leader>gI', ':G rebase -i ')
+vim.keymap.set('n', '<leader>gRc', ':G rebase --continue ')
+vim.keymap.set('n', '<leader>gRa', ':G rebase --abort ')
+
 -- "advanced"
 vim.keymap.set('n', '<leader>gF', ':G fetch --all<CR>')
 vim.keymap.set('n', '<leader>gR', ':G reset HEAD~')
 vim.keymap.set('n', '<leader>gK', ':G push -f ')
 vim.keymap.set('n', '<leader>gJ', ':G pull -f ')
-vim.keymap.set('n', '<leader>gI', ':G rebase -i ')
-vim.keymap.set('n', '<leader>gRc', ':G rebase --continue ')
-vim.keymap.set('n', '<leader>gRa', ':G rebase --abort ')
 
 -- Merge conflict
 vim.keymap.set('n', '<leader>gDs', ':Gvdiffsplit!<CR>')
