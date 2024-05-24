@@ -15,6 +15,7 @@ vim.keymap.set('n', '<leader>gk', ':G push ')
 vim.keymap.set('n', '<leader>guk', ':G push -u origin ')
 
 -- rebase
+vim.keymap.set('n', '<leader>ge', ':G rebase ')
 vim.keymap.set('n', '<leader>gI', ':G rebase -i ')
 vim.keymap.set('n', '<leader>gRc', ':G rebase --continue ')
 vim.keymap.set('n', '<leader>gRa', ':G rebase --abort ')
