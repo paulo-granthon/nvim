@@ -12,6 +12,9 @@ vim.keymap.set('n', '<leader>vs', ':vs<CR>') -- faster splits (vertical)
 vim.keymap.set({ 'n', 'v' }, '<leader>vw', ':vs<CR><C-w>w') -- vertical split and focus on split
 vim.keymap.set({ 'n', 'v' }, '<leader>sw', ':sp<CR><C-w>w') -- horizontal split and focus on split
 
+-- split terminal + focus
+vim.keymap.set({ 'n', 'v' }, '<leader>tw', ':vs<CR><C-w>w<CR>:ter<CR>a') -- split terminal and focus on terminal
+
 -- pane navigation / focusing
 vim.keymap.set({ 'n', 'v' }, '\\w', '<C-w>w') -- focus on "next" pane
 vim.keymap.set({ 'n', 'v' }, '\\W', '<C-w>W') -- focus on "previous" pane
