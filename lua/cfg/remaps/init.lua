@@ -82,8 +82,11 @@ vim.keymap.set('n', '<leader>mr', '<cmd>CellularAutomaton make_it_rain<CR>')
 
 -- source new updated configs from anywhere
 vim.keymap.set('n', '<leader>so', function()
-  require('cfg')
-  vim.cmd(':source $HOME/.config/nvim/lua/cfg/remap.lua')
+  local path = '$HOME/.config/nvim/lua/cfg/remaps'
+  vim.cmd(':source ' .. path .. '/init.lua')
+  vim.cmd(':source ' .. path .. '/unix.lua')
+  vim.cmd(':source ' .. path .. '/format.lua')
+  vim.cmd(':source ' .. path .. '/panes.lua')
 end)
 
 require('cfg.remaps.unix')
