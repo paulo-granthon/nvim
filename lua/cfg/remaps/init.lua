@@ -64,8 +64,6 @@ vim.keymap.set({ 'n', 'v', 'i' }, '<C-End>', '<C-End>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
-require('cfg.remaps.panes')
-
 -- greatest remap ever | Pastes without losing the current paste buffer
 vim.keymap.set('x', '<leader>p', [["_dP]])
 
@@ -90,3 +88,4 @@ end)
 
 require('cfg.remaps.unix')
 require('cfg.remaps.format')
+require('cfg.remaps.panes')
