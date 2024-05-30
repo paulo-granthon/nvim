@@ -31,6 +31,7 @@ vim.keymap.set('n', '<leader>tlw', function() vim.wo.wrap = not vim.wo.wrap end)
 -- Better Esc in insert mode
 vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('i', 'kj', '<Esc>')
+vim.keymap.set('i', 'lhlh', '<Esc>')
 
 -- Don't select EOL when selecting to the end of the line
 vim.keymap.set('v', '$', '$h')
