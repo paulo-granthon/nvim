@@ -7,6 +7,6 @@ require('trouble').setup({
 })
 
 vim.keymap.set(
-  'n', '<leader>xq', '<cmd>TroubleToggle workspace_diagnostics<cr>',
+  'n', '<leader>xq', '<cmd>Trouble diagnostics<cr>',
   { silent = true, noremap = true }
 )
