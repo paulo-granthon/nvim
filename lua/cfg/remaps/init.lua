@@ -28,6 +28,9 @@ vim.keymap.set('n', '<C-L><C-L>', ':set invrelativenumber<CR>')
 -- Sometimes is useful to have line wrap on
 vim.keymap.set('n', '<leader>tlw', function() vim.wo.wrap = not vim.wo.wrap end)
 
+-- Sometimes is useful to have search highlight on
+vim.keymap.set('n', '<leader>thl', function() vim.opt.hlsearch = not vim.opt.hlsearch end)
+
 -- Better Esc in insert mode
 vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('i', 'kj', '<Esc>')
