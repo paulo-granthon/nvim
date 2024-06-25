@@ -57,7 +57,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<PageDown>', '<C-d>zz')
 vim.keymap.set('n', '<PageUp>', '<C-u>zz')
 
--- Also center when movind to end of buffer
+-- Also center when moving to end of buffer
 vim.keymap.set({ 'n', 'v', 'i' }, '<C-End>', '<C-End>zz')
 
 -- Keep cursor in the middle while looking through search results
