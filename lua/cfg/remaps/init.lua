@@ -26,10 +26,16 @@ vim.keymap.set('n', '<leader>i', vim.show_pos)
 vim.keymap.set('n', '<C-L><C-L>', ':set invrelativenumber<CR>')
 
 -- Sometimes is useful to have line wrap on
-vim.keymap.set('n', '<leader>tlw', function() vim.wo.wrap = not vim.wo.wrap end)
+vim.keymap.set('n', '<leader>tlw', function()
+  vim.wo.wrap = not vim.wo.wrap
+  print('Line wrap ' .. (vim.wo.wrap and 'enabled' or 'disabled'))
+end)
 
 -- Sometimes is useful to have search highlight on
-vim.keymap.set('n', '<leader>thl', function() vim.opt.hlsearch = not vim.opt.hlsearch:get() end)
+vim.keymap.set('n', '<leader>thl', function()
+  vim.opt.hlsearch = not vim.opt.hlsearch:get()
+  print('Search highlight ' .. (vim.opt.hlsearch:get() and 'enabled' or 'disabled'))
+end)
 
 -- Better Esc in insert mode
 vim.keymap.set('i', 'jk', '<Esc>')
