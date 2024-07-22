@@ -22,6 +22,7 @@ vim.keymap.set('n', '<leader>gRa', ':G rebase --abort ')
 
 -- "advanced"
 vim.keymap.set('n', '<leader>gF', ':G fetch --all<CR>')
+vim.keymap.set('n', '<leader>gM', ':G fetch --all<CR>:G merge origin/main')
 vim.keymap.set('n', '<leader>gR', ':G reset HEAD~')
 vim.keymap.set('n', '<leader>gK', ':G push -f ')
 vim.keymap.set('n', '<leader>gJ', ':G pull -f ')
