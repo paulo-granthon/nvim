@@ -3,6 +3,10 @@ local lsp = require('lsp-zero').preset({})
 lsp.ensure_installed({
   'rust_analyzer',
   'lua_ls',
+  'pyright',
+  'eslint',
+  'tsserver',
+  'bashls',
 })
 
 local cmp = require('cmp')
