@@ -5,14 +5,19 @@ local mason_tool_installer = mason_tool_installer_or_err
 
 mason_tool_installer.setup({
   ensure_installed = {
+    'eslint',
+    'cpplint',
+    'stylelint',
     'prettier',
-    'google-java-format',
+    'hadolint',
+    'jsonlint',
+    'luacheck',
     'stylua',
+    'markdownlint',
     'isort',
     'black',
-    'rustfmt',
-    'gofumpt',
-    'shfmt',
-    'csharpier',
+    'pylint',
+    'shellcheck',
+    'yamllint',
   },
 })
