@@ -14,7 +14,7 @@ conform.setup({
     json = { 'prettier' },
     html = { 'prettier' },
     lua = { 'stylua' },
-    python = { 'isort', 'black' },
+    python = { 'pylint' },
     rust = { 'rustfmt' },
     go = { 'gofumpt' },
     markdown = { 'prettier' },

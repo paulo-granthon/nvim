@@ -14,8 +14,6 @@ mason_tool_installer.setup({
     'luacheck',
     'stylua',
     'markdownlint',
-    'isort',
-    'black',
     'pylint',
     'shellcheck',
     'yamllint',
