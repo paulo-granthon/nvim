@@ -23,6 +23,8 @@ return require('lazy').setup({
   -- colorscheme
   'paulo-granthon/hyper.nvim',
 
+  'lambdalisue/vim-suda',
+
   {
     'stevearc/oil.nvim',
     event = { 'VimEnter' },
