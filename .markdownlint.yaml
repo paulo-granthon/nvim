@@ -1,0 +1,16 @@
+---
+MD013:
+  line_length: 160
+
+MD022:
+  lines_above: 0
+  lines_below: 0
+
+MD032: false
+
+MD033:
+  allowed_elements:
+    - "a"
+    - "img"
+
+MD045: false
