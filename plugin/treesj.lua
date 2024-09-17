@@ -36,3 +36,13 @@ vim.keymap.set('n', '<leader>tsj', vim.cmd.TSJSplit)
 
 -- join
 vim.keymap.set('n', '<leader>tsk', vim.cmd.TSJJoin)
+
+-- toggle recursive
+vim.keymap.set('n', '<leader>tsO', function()
+  treesj.toggle({ split = { recursive = true } }) --
+end)
+
+-- split recursive
+vim.keymap.set('n', '<leader>tsJ', function()
+  treesj.split({ split = { recursive = true } }) --
+end)
