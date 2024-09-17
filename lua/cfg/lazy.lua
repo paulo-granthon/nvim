@@ -97,10 +97,6 @@ return require('lazy').setup({
   {
     'Wansmer/treesj',
     dependencies = { 'nvim-treesitter' },
-    config = function()
-      require('treesj').setup({ --[[ your config ]]
-      })
-    end,
   },
 
   'theprimeagen/refactoring.nvim',
