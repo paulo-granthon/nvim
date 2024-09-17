@@ -28,11 +28,11 @@ treesj.setup({
   -- langs = {}, -- See the default presets in lua/treesj/langs
 })
 
-vim.keymap.set("n", "<leader>tsj", vim.cmd.TSJToggle)
 -- toggle
+vim.keymap.set('n', '<leader>tso', vim.cmd.TSJToggle)
 
-vim.keymap.set("n", "<leader>sjs", vim.cmd.TSJSplit)
 -- split
+vim.keymap.set('n', '<leader>tsj', vim.cmd.TSJSplit)
 
-vim.keymap.set("n", "<leader>jsj", vim.cmd.TSJJoin)
 -- join
+vim.keymap.set('n', '<leader>tsk', vim.cmd.TSJJoin)
