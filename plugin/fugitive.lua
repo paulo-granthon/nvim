@@ -27,10 +27,16 @@ vim.keymap.set('n', '<leader>gR', ':G reset HEAD~')
 vim.keymap.set('n', '<leader>gK', ':G push -f ')
 vim.keymap.set('n', '<leader>gJ', ':G pull -f ')
 
--- Merge conflict
+-- Merge conflict -- split into diff view
 vim.keymap.set('n', '<leader>gDs', ':Gvdiffsplit!<CR>')
+
+-- Merge conflict -- resolve chunk
 vim.keymap.set('n', '<leader>gDj', ':diffget //2<CR>')
 vim.keymap.set('n', '<leader>gDk', ':diffget //3<CR>')
+
+-- Merge conflict -- resolve all
+vim.keymap.set('n', '<leader>gDJ', ':Gread >:2<CR>')
+vim.keymap.set('n', '<leader>gDK', ':Gread >:3<CR>')
 
 -- info
 vim.keymap.set('n', '<leader>gd', ':G diff<CR>')
