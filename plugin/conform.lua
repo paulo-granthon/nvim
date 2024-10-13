@@ -22,6 +22,7 @@ conform.setup({
     toml = { 'prettier' },
     sh = { 'shfmt' },
     css = { 'prettier' },
+    xml = { 'xmlformat' }
     -- cs = { 'csharpier' },
   },
 })
