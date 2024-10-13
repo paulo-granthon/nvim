@@ -17,5 +17,6 @@ mason_tool_installer.setup({
     'pylint',
     'shellcheck',
     'yamllint',
+    -- 'csharpier',
   },
 })
