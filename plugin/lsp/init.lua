@@ -5,7 +5,6 @@ lsp.ensure_installed({
   'lua_ls',
   'pyright',
   'eslint',
-  'tsserver',
   'bashls',
 })
 
