@@ -18,7 +18,7 @@ end)
 
 vim.keymap.set('n', '<leader>pr', function()
   builtin.grep_string({
-    search = vim.fn.input('Grep > '),
+    search = vim.fn.input('Regex > '),
     use_regex = true,
   })
 end)
