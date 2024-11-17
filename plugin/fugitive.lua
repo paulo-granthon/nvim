@@ -65,5 +65,6 @@ vim.keymap.set('n', '<leader>gbd', ':G branch -d ')
 vim.keymap.set('n', '<leader>gbD', ':G branch -D ')
 vim.keymap.set('n', '<leader>gbkd', ':G push origin --delete ')
 
--- craziness
+-- submodule
+vim.keymap.set('n', '<leader>gusa', ':G submodule add ')
 vim.keymap.set('n', '<leader>gusm', ':G submodule update --init --recursive')
