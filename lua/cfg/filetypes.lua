@@ -40,5 +40,16 @@ vim.api.nvim_create_autocmd('FileType', {
     'tsx',
     'vue',
   },
-  callback = function() require('lspconfig').tsserver.setup({}) end,
+  callback = function() --
+    require('lspconfig').tsserver.setup({})
+  end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = {
+    'lua',
+  },
+  callback = function() --
+    require('cfg.remaps.lua')
+  end,
 })
