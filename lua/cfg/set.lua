@@ -10,6 +10,9 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+vim.opt.wildmode = {'list:longest', 'full'}
+vim.opt.wildmenu = true -- Show the list of completions in a menu
+
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
