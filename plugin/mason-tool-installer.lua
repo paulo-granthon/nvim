@@ -14,7 +14,7 @@ mason_tool_installer.setup({
     'luacheck',
     'stylua',
     'markdownlint',
-    'pylint',
+    'flake8',
     'shellcheck',
     'yamllint',
     -- 'csharpier',
