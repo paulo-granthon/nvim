@@ -3,4 +3,3 @@ plugin/packer_compiled.lua
 lazy-lock.json
 lua/cfg/local.lua
 workspace/
-env/
