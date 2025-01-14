@@ -23,42 +23,33 @@ vim.keymap.set('n', '<leader>pr', function()
   })
 end)
 
-local function get_selection_text_by_line()
-  local _, ls, cs = unpack(vim.fn.getpos('v'))
-  local _, le, ce = unpack(vim.fn.getpos('.'))
+local util_ok, util_or_err = pcall(require, 'cfg.util')
+if not util_ok then
+  print('failed to import cfg.util from plugin.telescope')
+else
+  local util = util_or_err
 
-  if ls > le or (ls == le and cs > ce) then
-    ls, cs, le, ce = le, ce, ls, cs
-  end
+  vim.keymap.set('v', '<leader>ps', function()
+    builtin.grep_string({
+      search = util.get_selected_text(),
+      use_regex = true,
+    })
+  end)
 
-  return vim.api.nvim_buf_get_text(0, ls - 1, cs - 1, le - 1, ce, {})
+  local esc_seach = vim.api.nvim_replace_termcodes('<Esc>?', true, false, true)
+  local esc_find = vim.api.nvim_replace_termcodes('<Esc>:%s/', true, false, true)
+  local replace = vim.api.nvim_replace_termcodes('/', true, false, true)
+
+  vim.keymap.set('v', '?', function()
+    local selected_text = util.get_selected_text()
+    vim.api.nvim_feedkeys(esc_seach, 'n', false)
+    vim.api.nvim_feedkeys(selected_text, 'n', false)
+  end)
+
+  vim.keymap.set('v', '<C-s>', function()
+    local selected_text = util.get_selected_text()
+    vim.api.nvim_feedkeys(esc_find, 'n', false)
+    vim.api.nvim_feedkeys(selected_text, 'n', false)
+    vim.api.nvim_feedkeys(replace, 'n', false)
+  end)
 end
-
-local function get_selected_text()
-  local selected_text_table = get_selection_text_by_line()
-  return table.concat(selected_text_table, '\n')
-end
-
-vim.keymap.set('v', '<leader>ps', function()
-  builtin.grep_string({
-    search = get_selected_text(),
-    use_regex = true,
-  })
-end)
-
-local esc_seach = vim.api.nvim_replace_termcodes('<Esc>?', true, false, true)
-local esc_find = vim.api.nvim_replace_termcodes('<Esc>:%s/', true, false, true)
-local replace = vim.api.nvim_replace_termcodes('/', true, false, true)
-
-vim.keymap.set('v', '?', function()
-  local selected_text = get_selected_text()
-  vim.api.nvim_feedkeys(esc_seach, 'n', false)
-  vim.api.nvim_feedkeys(selected_text, 'n', false)
-end)
-
-vim.keymap.set('v', '<C-s>', function()
-  local selected_text = get_selected_text()
-  vim.api.nvim_feedkeys(esc_find, 'n', false)
-  vim.api.nvim_feedkeys(selected_text, 'n', false)
-  vim.api.nvim_feedkeys(replace, 'n', false)
-end)
