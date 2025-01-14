@@ -45,7 +45,7 @@ vim.keymap.set('i', 'lhlh', '<Esc>')
 -- Don't select EOL when selecting to the end of the line
 vim.keymap.set('v', '$', '$h')
 
--- Better exiting terminal insert mode
+-- Better exiting terminal mode
 vim.keymap.set('t', 'jk', '<C-\\><C-n>')
 vim.keymap.set('t', 'kj', '<C-\\><C-n>')
 
@@ -98,6 +98,7 @@ vim.keymap.set('n', '<leader>so', function()
   vim.cmd(':source ' .. path .. '/panes.lua')
 end)
 
+-- Source additional remaps
 require('cfg.remaps.unix')
 require('cfg.remaps.format')
 require('cfg.remaps.panes')
