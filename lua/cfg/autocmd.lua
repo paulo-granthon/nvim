@@ -21,11 +21,9 @@ local get_no_file_arg_function = function()
   return add_no_file_arg_check_to_function(wrap_cmd_in_function(oil_ok and oil_cmd or nrw_cmd))
 end
 
-local no_file_arg_callback = vim.schedule_wrap(function()
-  local vim_enter_no_arg_function = get_no_file_arg_function()
-  return vim_enter_no_arg_function()
-end)
-
 vim.api.nvim_create_autocmd({ 'VimEnter' }, {
-  callback = no_file_arg_callback,
+  callback = vim.schedule_wrap(function()
+    local vim_enter_no_arg_function = get_no_file_arg_function()
+    return vim_enter_no_arg_function()
+  end),
 })
