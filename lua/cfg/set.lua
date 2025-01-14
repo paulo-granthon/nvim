@@ -1,5 +1,3 @@
--- luacheck: globals vim
-
 -- Shows the number of lines up or down from the current line
 vim.opt.relativenumber = true
 vim.opt.nu = true -- Shows the "normal" line number for the current line

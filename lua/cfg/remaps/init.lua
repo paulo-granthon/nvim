@@ -1,5 +1,3 @@
--- luacheck: globals vim
-
 -- <Space> leader
 vim.g.mapleader = ' '
 
