@@ -1,6 +1,5 @@
 local telescope_builtin_ok, telescope_builtin_or_err = pcall(require, 'telescope.builtin')
-if not telescope_builtin_ok then return telescope_builtin_or_err end
-
+if not telescope_builtin_ok then return print(telescope_builtin_or_err) end
 local builtin = telescope_builtin_or_err
 
 vim.keymap.set('n', '<leader>pf', function()

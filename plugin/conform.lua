@@ -1,6 +1,6 @@
 -- Load `conform` module | Return early if error
 local conform_ok, conform_or_err = pcall(require, 'conform')
-if not conform_ok then return conform_or_err end
+if not conform_ok then return print(conform_or_err) end
 local conform = conform_or_err
 
 conform.setup({

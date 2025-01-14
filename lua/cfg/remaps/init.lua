@@ -97,6 +97,11 @@ vim.keymap.set('n', '<leader>so', function()
 end)
 
 -- Source additional remaps
-require('cfg.remaps.unix')
-require('cfg.remaps.format')
-require('cfg.remaps.panes')
+local unix_ok, unix_or_err = pcall(require, 'cfg.remaps.unix')
+if not unix_ok then return print('failed to import cfg.unix from `cfg`' .. unix_or_err) end
+
+local format_ok, format_or_err = pcall(require, 'cfg.remaps.format')
+if not format_ok then return print('failed to import cfg.format from `cfg`' .. format_or_err) end
+
+local panes_ok, panes_or_err = pcall(require, 'cfg.remaps.panes')
+if not panes_ok then return print('failed to import cfg.panes from `cfg`' .. panes_or_err) end
