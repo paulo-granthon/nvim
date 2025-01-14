@@ -43,6 +43,20 @@ vim.keymap.set('i', 'lhlh', '<Esc>')
 -- Don't select EOL when selecting to the end of the line
 vim.keymap.set('v', '$', '$h')
 
+local util_ok, util_or_err = pcall(require, 'cfg.util')
+if not util_ok then
+  print('failed to import cfg.util from cfg.remaps' .. util_or_err)
+else
+  local util = util_or_err
+
+  -- Map Esc in command-line mode to conditionally reselect text
+  vim.keymap.set('c', '<Esc>', function()
+    local command = '<C-c>'
+    if util.get_selected_text() ~= '' then command = command .. 'gv' end
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(command, true, true, true), 'n', true)
+  end)
+end
+
 -- Better exiting terminal mode
 vim.keymap.set('t', 'jk', '<C-\\><C-n>')
 vim.keymap.set('t', 'kj', '<C-\\><C-n>')
