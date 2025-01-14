@@ -1,5 +1,5 @@
 local lsp_ok, lsp_or_err = pcall(require, 'lsp')
-if not lsp_ok then return lsp_or_err end
+if not lsp_ok then return print(lsp_or_err) end
 
 local client_capabilities = lsp_or_err.protocol.make_client_capabilities()
 
