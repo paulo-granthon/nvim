@@ -1,5 +1,3 @@
-local fn = vim.fn
-
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -136,6 +134,8 @@ return require('lazy').setup({
     },
   },
 
+  'folke/lazydev.nvim',
+
   -- formatting
   {
     'stevearc/conform.nvim',
@@ -200,7 +200,7 @@ return require('lazy').setup({
   -- Markdown file preview
   {
     'iamcco/markdown-preview.nvim',
-    build = function() fn['mkdp#util#install']() end,
+    build = function() vim.fn['mkdp#util#install']() end,
   },
 
   {
