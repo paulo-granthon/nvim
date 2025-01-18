@@ -1,6 +1,5 @@
--- Load `treesj` module | Return early if error
 local treesj_ok, treesj_or_err = pcall(require, 'treesj')
-if not treesj_ok then return print(treesj_or_err) end
+if not treesj_ok then return print(treesj_or_err .. '\n\n' .. debug.traceback()) end
 
 local treesj = treesj_or_err
 

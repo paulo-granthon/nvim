@@ -1,5 +1,5 @@
 local oil_ok, oil_or_err = pcall(require, 'oil')
-if not oil_ok then return print(oil_or_err) end
+if not oil_ok then return print(oil_or_err .. '\n\n' .. debug.traceback()) end
 local oil = oil_or_err
 
 oil.setup({

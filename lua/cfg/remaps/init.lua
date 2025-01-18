@@ -45,7 +45,7 @@ vim.keymap.set('v', '$', '$h')
 
 local util_ok, util_or_err = pcall(require, 'cfg.util')
 if not util_ok then
-  print('failed to import cfg.util from cfg.remaps' .. util_or_err)
+  print(util_or_err .. '\n\n' .. debug.traceback())
 else
   local util = util_or_err
 
@@ -112,10 +112,10 @@ end)
 
 -- Source additional remaps
 local unix_ok, unix_or_err = pcall(require, 'cfg.remaps.unix')
-if not unix_ok then return print('failed to import cfg.unix from `cfg`' .. unix_or_err) end
+if not unix_ok then return print(unix_or_err .. '\n\n' .. debug.traceback()) end
 
 local format_ok, format_or_err = pcall(require, 'cfg.remaps.format')
-if not format_ok then return print('failed to import cfg.format from `cfg`' .. format_or_err) end
+if not format_ok then return print(format_or_err .. '\n\n' .. debug.traceback()) end
 
 local panes_ok, panes_or_err = pcall(require, 'cfg.remaps.panes')
-if not panes_ok then return print('failed to import cfg.panes from `cfg`' .. panes_or_err) end
+if not panes_ok then return print(panes_or_err .. '\n\n' .. debug.traceback()) end

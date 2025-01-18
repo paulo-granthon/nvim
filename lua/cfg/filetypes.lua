@@ -39,7 +39,11 @@ vim.api.nvim_create_autocmd('FileType', {
     'vue',
   },
   callback = function() --
-    require('lspconfig').tsserver.setup({})
+    local lsp_ok, lsp_or_err = pcall(require, 'lspconfig')
+    if not lsp_ok then return print(lsp_or_err .. '\n\n' .. debug.traceback()) end
+    local lsp = lsp_or_err
+
+    lsp.tsserver.setup({})
   end,
 })
 
@@ -48,6 +52,7 @@ vim.api.nvim_create_autocmd('FileType', {
     'lua',
   },
   callback = function() --
-    require('cfg.remaps.lua')
+    local lua_remaps_ok, lua_remaps_or_err = pcall(require, 'cfg.remaps.lua')
+    if not lua_remaps_ok then return print(lua_remaps_or_err .. '\n\n' .. debug.traceback()) end
   end,
 })

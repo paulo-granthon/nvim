@@ -1,4 +1,8 @@
-require('lspconfig').lua_ls.setup({
+local lsp_ok, lsp_or_err = pcall(require, 'lspconfig')
+if not lsp_ok then return print(lsp_or_err .. '\n\n' .. debug.traceback()) end
+local lsp = lsp_or_err
+
+lsp.lua_ls.setup({
   settings = {
     Lua = {
       diagnostics = {

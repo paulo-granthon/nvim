@@ -1,6 +1,5 @@
--- Load `agitate` module | Return early if error
 local agitate_ok, agitate_or_err = pcall(require, 'agitate')
-if not agitate_ok then return print(agitate_or_err) end
+if not agitate_ok then return print(agitate_or_err .. '\n\n' .. debug.traceback()) end
 
 -- Load env for `agitate`
 local env_ok, env_or_err = pcall(require, 'env.agitate')

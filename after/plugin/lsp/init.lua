@@ -1,4 +1,6 @@
-local lsp = require('lsp-zero').preset({})
+local lsp_ok, lsp_or_err = pcall(require, 'lsp-zero')
+if not lsp_ok then return print(lsp_or_err .. '\n\n' .. debug.traceback()) end
+local lsp = lsp_or_err.preset({})
 
 lsp.ensure_installed({
   'rust_analyzer',
@@ -7,7 +9,10 @@ lsp.ensure_installed({
   'bashls',
 })
 
-local cmp = require('cmp')
+local cmp_ok, cmp_or_err = pcall(require, 'cmp')
+if not cmp_ok then return print(cmp_or_err .. '\n\n' .. debug.traceback()) end
+local cmp = cmp_or_err
+
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-p'] = cmp.mapping.select_prev_item(cmp_select),
@@ -48,7 +53,14 @@ vim.diagnostic.config({
   virtual_text = true,
 })
 
-require('java').setup()
-require('lspconfig').jdtls.setup({})
+local java_ok, java_or_err = pcall(require, 'java')
+if not java_ok then return print(java_or_err .. '\n\n' .. debug.traceback()) end
+local java = java_or_err
+java.setup()
+
+local lspconfig_ok, lspconfig_or_err = pcall(require, 'lspconfig')
+if not lspconfig_ok then return print(lspconfig_or_err .. '\n\n' .. debug.traceback()) end
+local lspconfig = lspconfig_or_err
+lspconfig.jdtls.setup({})
 
 lsp.setup()

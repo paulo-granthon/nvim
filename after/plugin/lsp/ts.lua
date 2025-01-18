@@ -1,5 +1,9 @@
-local lsp_ok, lsp_or_err = pcall(require, 'lsp')
-if not lsp_ok then return print(lsp_or_err) end
+-- luacheck: ignore 021 511 631
+if true then return end
+
+local lsp_ok, lsp_or_err = pcall(require, 'lspconfig')
+if not lsp_ok then return print(lsp_or_err .. '\n\n' .. debug.traceback()) end
+local lsp = lsp_or_err
 
 local client_capabilities = lsp_or_err.protocol.make_client_capabilities()
 

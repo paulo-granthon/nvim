@@ -12,7 +12,11 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-return require('lazy').setup({
+local lazy_ok, lazy_or_err = pcall(require, 'lazy')
+if not lazy_ok then return print(lazy_or_err .. '\n\n' .. debug.traceback()) end
+local lazy = lazy_or_err
+
+return lazy.setup({
 
   'paulo-granthon/agitate.nvim',
 
@@ -213,7 +217,7 @@ return require('lazy').setup({
 
   {
     'ray-x/go.nvim',
-    branch = "nvim_0.8",
+    branch = 'nvim_0.8',
     dependencies = { -- optional packages
       'ray-x/guihua.lua',
       'neovim/nvim-lspconfig',

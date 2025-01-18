@@ -1,6 +1,5 @@
--- Load `nvim_lint` module | Return early if error
 local nvim_lint_ok, nvim_lint_or_err = pcall(require, 'lint')
-if not nvim_lint_ok then return print(nvim_lint_or_err) end
+if not nvim_lint_ok then return print(nvim_lint_or_err .. '\n\n' .. debug.traceback()) end
 local lint = nvim_lint_or_err
 
 lint.linters_by_ft = {

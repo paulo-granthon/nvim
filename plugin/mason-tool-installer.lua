@@ -1,5 +1,5 @@
 local mason_tool_installer_ok, mason_tool_installer_or_err = pcall(require, 'mason-tool-installer')
-if not mason_tool_installer_ok then return print(mason_tool_installer_or_err) end
+if not mason_tool_installer_ok then return print(mason_tool_installer_or_err .. '\n\n' .. debug.traceback()) end
 
 local mason_tool_installer = mason_tool_installer_or_err
 
