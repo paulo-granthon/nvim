@@ -18,6 +18,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>tw', ':vs<CR><C-w>w<CR>:ter<CR>a') -- spli
 -- pane navigation / focusing
 vim.keymap.set({ 'n', 'v' }, '\\w', '<C-w>w') -- focus on "next" pane
 vim.keymap.set({ 'n', 'v' }, '\\W', '<C-w>W') -- focus on "previous" pane
+vim.keymap.set({ 'n', 'v' }, '\\m', '<C-w>m') -- focus on "previous" pane, also
 
 -- directional pane navigation / focusing
 vim.keymap.set({ 'n', 'v' }, '\\h', '<C-w>h') -- focus on next pane to the left
