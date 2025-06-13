@@ -2,6 +2,9 @@
 vim.opt.relativenumber = true
 vim.opt.nu = true -- Shows the "normal" line number for the current line
 
+-- disable cursor blink
+vim.opt.guicursor = 'a:blinkon0'
+
 -- Key sequence timeout
 vim.opt.timeoutlen = 500
 
