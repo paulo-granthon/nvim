@@ -28,3 +28,6 @@ if not local_ok then return print(local_or_err .. '\n\n' .. debug.traceback()) e
 
 local yank_ok, yank_or_err = pcall(require, 'cfg.yank')
 if not yank_ok then return print(yank_or_err .. '\n\n' .. debug.traceback()) end
+
+local panel_stack_ok, panel_stack_or_err = pcall(require, 'cfg.panel_stack')
+if not panel_stack_ok then return print(panel_stack_or_err .. '\n\n' .. debug.traceback()) end
