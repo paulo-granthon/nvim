@@ -30,6 +30,6 @@ vim.keymap.set({ 'n', 'v' }, '<leader>F', function()
   require('conform').format({
     lsp_fallback = true,
     async = false,
-    timeout_ms = 1500,
+    timeout_ms = 15000, -- 15 seconds
   })
 end, { desc = 'Format file with Conform.nvim' })

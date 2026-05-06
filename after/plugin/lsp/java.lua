@@ -1,6 +1,11 @@
 -- luacheck: ignore 021 511 631
 if true then return end
 
+local lspconfig_ok, lspconfig_or_err = pcall(require, 'lspconfig')
+if not lspconfig_ok then return print(lspconfig_or_err .. '\n\n' .. debug.traceback()) end
+local lspconfig = lspconfig_or_err
+lspconfig.jdtls.setup({})
+
 local home = os.getenv("HOME")
 local jdtls = require("jdtls")
 

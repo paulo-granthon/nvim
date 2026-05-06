@@ -2,12 +2,26 @@ local lsp_ok, lsp_or_err = pcall(require, 'lsp-zero')
 if not lsp_ok then return print(lsp_or_err .. '\n\n' .. debug.traceback()) end
 local lsp = lsp_or_err.preset({})
 
-lsp.ensure_installed({
-  'rust_analyzer',
-  'lua_ls',
-  'eslint',
-  'bashls',
-})
+-- lsp.ensure_installed({
+--   'rust_analyzer',
+--   'lua_ls',
+--   'eslint',
+--   'bashls',
+-- })
+
+-- local mason_lspconfig_ok, mason_lspconfig_or_err = pcall(require, 'mason-lspconfig')
+-- if not mason_lspconfig_ok then return print(mason_lspconfig_or_err .. '\n\n' .. debug.traceback()) end
+-- local mason_lspconfig = mason_lspconfig_or_err
+--
+-- mason_lspconfig.setup({
+--   ensure_installed = {
+--     'rust_analyzer',
+--     'lua_ls',
+--     'eslint',
+--     'bashls',
+--   },
+--   automatic_installation = true,
+-- })
 
 local cmp_ok, cmp_or_err = pcall(require, 'cmp')
 if not cmp_ok then return print(cmp_or_err .. '\n\n' .. debug.traceback()) end
@@ -52,15 +66,5 @@ end)
 vim.diagnostic.config({
   virtual_text = true,
 })
-
-local java_ok, java_or_err = pcall(require, 'java')
-if not java_ok then return print(java_or_err .. '\n\n' .. debug.traceback()) end
-local java = java_or_err
-java.setup()
-
-local lspconfig_ok, lspconfig_or_err = pcall(require, 'lspconfig')
-if not lspconfig_ok then return print(lspconfig_or_err .. '\n\n' .. debug.traceback()) end
-local lspconfig = lspconfig_or_err
-lspconfig.jdtls.setup({})
 
 lsp.setup()

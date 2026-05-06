@@ -31,3 +31,32 @@ if not yank_ok then return print(yank_or_err .. '\n\n' .. debug.traceback()) end
 
 local panel_stack_ok, panel_stack_or_err = pcall(require, 'cfg.panel_stack')
 if not panel_stack_ok then return print(panel_stack_or_err .. '\n\n' .. debug.traceback()) end
+
+-- Load panel stack
+panel_stack_or_err.setup({ max_capacity = 20 })
+
+-- Keybinding to reopen last closed panel
+vim.keymap.set('n', '<leader>p', ':ReopenPanel<CR>', { noremap = true, silent = true })
+
+
+
+-- -- TODO: Auto-require all files in cfg/ (except init.lua):
+-- -- Path to your cfg directory
+-- local cfg_path = vim.fn.stdpath("config") .. "/lua/cfg"
+--
+-- -- Read all .lua files in cfg/
+-- local files = vim.fn.readdir(cfg_path, function(fname)
+--   return fname:match("%.lua$")
+-- end)
+--
+-- -- Iterate through files, require each (skip init.lua)
+-- for _, file in ipairs(files) do
+--   local name = file:gsub("%.lua$", "") -- strip .lua
+--   if name ~= "init" then
+--     local ok, result_or_err = pcall(require, "cfg." .. name)
+--     if not ok then
+--       return print(("Error loading cfg.%s:\n%s\n\n%s"):format(name, result_or_err, debug.traceback()))
+--     end
+--   end
+-- end
+--

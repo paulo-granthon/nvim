@@ -140,6 +140,12 @@ return lazy.setup({
 
   'folke/lazydev.nvim',
 
+  -- TypeScript - Inspect type with `^?` comment
+  {
+    'typed-rocks/witt-neovim',
+    config = function() require('witt') end,
+  },
+
   -- formatting
   {
     'stevearc/conform.nvim',
@@ -202,18 +208,18 @@ return lazy.setup({
   'mfussenegger/nvim-jdtls',
 
   -- Markdown file preview
-  {
-    'iamcco/markdown-preview.nvim',
-    build = function() vim.fn['mkdp#util#install']() end,
-  },
-
-  {
-    'MeanderingProgrammer/render-markdown.nvim',
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter',
-      'nvim-tree/nvim-web-devicons',
-    },
-  },
+  -- {
+  --   'iamcco/markdown-preview.nvim',
+  --   build = function() vim.fn['mkdp#util#install']() end,
+  -- },
+  --
+  -- {
+  --   'MeanderingProgrammer/render-markdown.nvim',
+  --   dependencies = {
+  --     'nvim-treesitter/nvim-treesitter',
+  --     'nvim-tree/nvim-web-devicons',
+  --   },
+  -- },
 
   {
     'ray-x/go.nvim',

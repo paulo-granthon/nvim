@@ -48,11 +48,13 @@ if not util_ok then
   print(util_or_err .. '\n\n' .. debug.traceback())
 else
   local util = util_or_err
+  local selected_text = nil
 
   -- Map Esc in command-line mode to conditionally reselect text
   vim.keymap.set('c', '<Esc>', function()
     local command = '<C-c>'
-    if util.get_selected_text() ~= '' then command = command .. 'gv' end
+    selected_text = util.get_selected_text()
+    if selected_text ~= nil and selected_text ~= '' then command = command .. 'gv' end
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(command, true, true, true), 'n', true)
   end)
 end
