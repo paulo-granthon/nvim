@@ -4,6 +4,7 @@ vim.keymap.set('n', '<leader>g', ':G ')
 -- fugitive status. 5j to move to first listed file
 vim.keymap.set('n', '<leader>gs', ':G<CR>5j')
 vim.keymap.set('n', '<leader>gvs', ':G<CR><C-w>H5j:vert res 80<CR>') -- git vertical status (compact)
+vim.keymap.set('n', '<leader>gvS', ':G<CR><C-w>H5j')                 -- git vertical status (full)
 
 -- basic workflow
 vim.keymap.set('n', '<leader>gf', ':G fetch<CR>')
