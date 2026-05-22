@@ -56,3 +56,14 @@ vim.api.nvim_create_autocmd('FileType', {
     if not lua_remaps_ok then return print(lua_remaps_or_err .. '\n\n' .. debug.traceback()) end
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = {
+    'ts',
+  },
+  callback = function() --
+    vim.api.nvim_echo({ { 'Is TS', 'InfoMsg' } }, true, {})
+    vim.lsp.enable('ts_ls')
+    vim.lsp.enable('eslint')
+  end,
+})
