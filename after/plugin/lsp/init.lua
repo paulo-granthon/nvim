@@ -1,3 +1,5 @@
+if true then return end
+
 local lsp_ok, lsp_or_err = pcall(require, 'lsp-zero')
 if not lsp_ok then return print(lsp_or_err .. '\n\n' .. debug.traceback()) end
 local lsp = lsp_or_err.preset({})

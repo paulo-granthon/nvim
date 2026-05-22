@@ -1,3 +1,5 @@
+if true then return end
+
 -- luacheck: ignore 021 511 631
 if true then return end
 

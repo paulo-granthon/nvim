@@ -1,3 +1,5 @@
+if true then return end
+
 -- luacheck: ignore 631
 require('refactoring').setup({})
 
