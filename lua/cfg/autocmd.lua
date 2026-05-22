@@ -36,3 +36,17 @@ vim.api.nvim_create_autocmd({ 'VimEnter' }, {
     return vim_enter_no_arg_function()
   end),
 })
+
+-- On BufReadPost, move the cursor to the last known position in the file
+local last_cursor_group = vim.api.nvim_create_augroup('LastCursor', {})
+vim.api.nvim_create_autocmd({ 'BufReadPost' }, {
+  group = last_cursor_group,
+  callback = function()
+    local mark = vim.api.nvim_buf_get_mark(0, '"')
+    local line_count = vim.api.nvim_buf_line_count(0)
+    pcall(vim.api.nvim_win_set_cursor, 0, {
+      math.min(mark[1], line_count),
+      mark[2],
+    })
+  end,
+})
