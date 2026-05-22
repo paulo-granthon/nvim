@@ -1,16 +1,25 @@
-local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
+local lazy_path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+if not (vim.uv or vim.loop).fs_stat(lazy_path) then
+  local lazy_repo = 'https://github.com/folke/lazy.nvim.git'
+  local out = vim.fn.system({
     'git',
     'clone',
     '--filter=blob:none',
-    'https://github.com/folke/lazy.nvim.git',
     '--branch=stable', -- latest stable release
-    lazypath,
+    lazy_repo,
+    lazy_path,
   })
-end
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { 'Failed to clone lazy.nvim:\n', 'ErrorMsg' },
+      { out, 'WarningMsg' },
+      { '\nPress any key to exit...' },
+    }, true, {})
 
-vim.opt.rtp:prepend(lazypath)
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazy_path)
 
 local lazy_ok, lazy_or_err = pcall(require, 'lazy')
 if not lazy_ok then return print(lazy_or_err .. '\n\n' .. debug.traceback()) end
@@ -206,7 +215,6 @@ return lazy.setup({
     'iamcco/markdown-preview.nvim',
     build = function() vim.fn['mkdp#util#install']() end,
   },
-
   {
     'MeanderingProgrammer/render-markdown.nvim',
     dependencies = {
