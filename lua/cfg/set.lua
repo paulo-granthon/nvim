@@ -36,7 +36,7 @@ vim.opt.termguicolors = true
 
 -- Padding when navigating the buffer
 vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 8
+vim.opt.sidescrolloff = 16
 
 -- Show the sign column with width of 1
 vim.opt.signcolumn = 'yes:1'
